@@ -1,0 +1,144 @@
+<!-- IMPROVEMENTS
+• Color scheme (lol)
+• Picture shadows on form profile pics?
+• Add a backup font in case the Google font goes offline
+• Figure out how to disable the default to boldest google font, particularly when hovering. 
+• Reduce extra header space at top? (has to do with relative position of balloon. How to adjust balloon's position if it's static?)
+• Remove slick dots, apply light, large arrows on edges of image, change image on click as well (dots take up real estate, are ugly)
+• Radiant grey to white below slick image
+• Decide on form setup with both headshots
+• Start on the About us page, wrap text around images. 
+• Redo your twitter/fb icons in PS, use more feathering
+• 'Center-Mode' for slick on full size site for now? (since we cant think of how to improve the borders)
+• White to grey gradient on background of slick down to bottom of section?
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>J&C Realty | Cypress Real Estate</title>
+  <link rel="stylesheet" href="js/slick/slick.css">
+  <link rel="stylesheet" href="js/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+
+  
+</head>
+
+<body>
+<div class="wrap">
+<!--   <div id='wrapper'> -->
+  <header class="group">
+    <div class = "container">
+        
+      <h1 class="main-header-h1 noMargins"><img class="headerBalloon" src="media/RemaxLogos/Standard_Balloon_Logo_BW_LineDrawing_WhiteBack_Web2.png">J<span style="font-weight: 100;">&</span>C Realty</h1>
+<!--       <h2 class="main-header">Cypress, TX REMAX Agents</h2> -->
+      <div class='nav'>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="listings.html">Listings</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+</div>
+    </div>
+  </header>
+  <main>
+                   <!-- slick begin-->
+<div class="slickSlidesOuter"> 
+   <div class="slickSlides">
+    <div><img src="media/image (4) resized.png"></div>
+    <div><img src="media/image (1) resized.png"></div>
+    <div><img src="media/image resized.png"></div>
+  </div>
+</div>
+<!-- slick end-->
+<!-- <div class="grayBar"></div> -->
+    <div class="primary-content">
+<!--     <h2 class ="noBottomMargin noTopMargin">Contact us:</h2> -->
+      <section id = "cardFormContainer">
+        <div class = "cardFormInner clear">
+          
+          <div id = "cardContainer">
+            <div id="profileImage">
+              <img src="media/headshot.jpg" class="headshotForm">
+              <img src="media/JaniceHeadshotCOLOR.jpg" class="headshotForm">
+            </div>
+            <div id="profileData">
+              <h2 id="profileName" class="noTopMargin">Courtney Farmer</h2>
+              <div class ="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
+              <div class="infoIndent">LISCENCE # 664187</div>
+              <div class="agency infoIndent"><span style="font-weight: 700;">Office Location:</span></div>
+              <div class="address infoIndent">12810 Telge Road <br> Cypress, TX 77429</div>
+              <div class="mobile infoIndent"><span style="font-weight: 700;">Mobile:</span> 713-725-1637</div>
+              <div class="office infoIndent"></div>
+
+               <h2 id="profileName2">Janice DiVenanzo</h2>
+              <div class ="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
+              <div class="infoIndent">LISCENCE # 647619</div>
+              <div class="agency infoIndent"><span style="font-weight: 700;">Office Location:</span></div>
+              <div class="address infoIndent">13611 Skinner Rd<br> Cypress, TX 77429</div>
+              <div class="mobile infoIndent"><span style="font-weight: 700;">Mobile:</span> 713-725-0878</div>
+              <div class="office infoIndent"></div>
+            </div>
+          </div>
+
+
+          
+          <div id = "contactMeProfile">
+            <form id = "profileForm" action = "" method = "post">
+              <input type="text" placeholder = "Name" name="user_name" value>
+              <input type="email" placeholder="Email Address" name="user_email" value>
+              <input type="text" placeholder = "Subject" name="user_subject" value>
+              <textarea placeholder="Message" name="user_message"></textarea>
+              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>    <!--  TAKE NOTE OF ONCLICK="$('RECAPTCHA')", LEARN IT  -->
+            </form>
+          </div>
+<!-- Janice -->
+
+
+<!--  -->
+        </div>
+
+      </section>
+
+
+    
+    <p>Customer Reviews:</p>
+<!--     </div> -->
+  </main>
+  </div>
+  <footer>
+    <div class='center'>
+        <a href = "https://twitter.com/Courtney_L_F" class = "socialTwitter" alt = "Twitter logo" target="_blank"></a>
+        <a href = "https://www.facebook.com/courtney.l.farmer" class = "socialFacebook" alt = "Facebook logo" target="_blank"></a>
+        <h4 class='noBottomMargin noTopMargin'>Courtney Farmer | 713-725-1637</h4>
+    <p>&copy; 2016</p>
+    </div>
+  </footer>
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="js/slick/slick.min.js"></script> 
+ <!--    <script src="js/app.js"</script>  -->
+  <script>
+    $('.slickSlides').slick({
+      arrows: false,
+      dots: false,
+      infinite: true,
+      speed: 400,
+      fade: true,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 5000
+      // appendArrows: $('.arrowAttach')
+    });
+  </script>
+  </div>
+</body>
+</html>
