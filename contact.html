@@ -5,6 +5,7 @@
 	  <title>J&C Realty | Cypress Real Estate</title>
 	  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
 	</head>
@@ -12,7 +13,7 @@
 	<body>
 		<div class="wrap">
 			<header class="group">
-     			 <h1 class="main-header-h1 noMargins">J<span style="font-weight: 200;">&</span>C Realty</h1>
+     			 <h1 class="main-header-h1 noMargins"><img class="headerBalloon" src="media/RemaxLogos/Standard_Balloon_Logo_BW_LineDrawing_WhiteBack_Web2.png">J<span style="font-weight: 100;">&</span>C Realty</h1>
 <!-- 			     <h2 class="main-header">Cypress, TX Real Estate</h2> -->
 			     <div class='nav'>
 			      <nav>
@@ -26,7 +27,48 @@
 				</div>
 			</header>
 			<main>
-				<div class="primary-content"></div>
+      <section id = "cardFormContainer">
+        <div class = "cardFormInner clear">
+          
+         <div id = "cardContainer">
+            <div id="profileImage">
+              <img src="media/headshot.jpg" class="headshotForm">
+              <img src="media/JaniceHeadshotCOLOR.jpg" class="headshotForm">
+            </div>
+            <div id="profileData">
+              <h2 id="profileName" class="noTopMargin">Courtney Farmer</h2>
+              <div class ="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
+              <div class="infoIndent">LISCENCE # 664187</div>
+              <div class="agency infoIndent"><span style="font-weight: 700;">Office Location:</span></div>
+              <div class="address infoIndent">12810 Telge Road <br> Cypress, TX 77429</div>
+              <div class="mobile infoIndent"><span style="font-weight: 700;">Mobile:</span> 713-725-1637</div>
+              <div class="office infoIndent"></div>
+
+               <h2 id="profileNameContact">Janice DiVenanzo</h2>
+              <div class ="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
+              <div class="infoIndent">LISCENCE # 647619</div>
+              <div class="agency infoIndent"><span style="font-weight: 700;">Office Location:</span></div>
+              <div class="address infoIndent">13611 Skinner Rd<br> Cypress, TX 77429</div>
+              <div class="mobile infoIndent"><span style="font-weight: 700;">Mobile:</span> 713-725-0878</div>
+              <div class="office infoIndent"></div>
+            </div>
+          </div>
+
+
+          
+          <div id = "contactMeProfile">
+            <form id = "profileForm" action = "" method = "post">
+              <input type="text" placeholder = "Name" name="user_name" value>
+              <input type="email" placeholder="Email Address" name="user_email" value>
+              <input type="text" placeholder = "Subject" name="user_subject" value>
+              <textarea placeholder="Message" name="user_message"></textarea>
+              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>
+            </form>
+          </div>
+
+        </div>
+
+      </section>
 			</main>
 			</div>
 			<footer>
