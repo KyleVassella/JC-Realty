@@ -7,8 +7,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-/*  height: 100%;*/
-/*  width: 100%;*/
   text-align: center;
 }
 
@@ -16,17 +14,12 @@ body {
   min-height: calc(100vh - 180px);
 }
 
-/*#wrapper {
-  min-height: 100%;
-  position:relative;
-}*/
-
 
 header {
 /*  background-color: pink;*/
-  background-color: rgba(255,192,203,1);
-  opacity: .6;
-  height: 25%;   /*160px*/
+  background-color: rgba(0, 23, 31, .5);        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
+/*  opacity: .6;*/
+  height: 328px;   /*160px*/
 /*  margin: 0;*/
   padding: 0;
 }
@@ -39,6 +32,7 @@ header {
 /*  float: left;
 padding-left: 200px;*/
   width: 200px;
+  opacity: .8;
 /*  margin-left: 20px;
   margin-top: 20px;*/
 }
@@ -48,6 +42,9 @@ padding-left: 200px;*/
   position: relative;
   font-size: 6em;
   left: -70px;
+  /*color: rgb(102, 102, 102);*/
+  opacity: 1;
+  color: #FFFFFA;
   }
 
 
@@ -56,17 +53,99 @@ margin-top: 15px;
 margin-bottom: 15px;
 }
 
-
-
-footer {
-  background-color: rgba(255,192,203,.6);
-/*  opacity: .5;*/
-/*  position: absolute;*/
-  height: 180px;
-  width: 100%;
-/*  left: 0;
-  bottom: 0;*/
+ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  padding-left: 0;
 }
+
+li {
+  display: inline;
+  text-transform: uppercase;
+
+}
+
+
+a:link {
+  text-decoration: none;
+  color: #FFFFFA;
+}
+
+nav a {
+  padding: 0 2px;
+}
+
+nav a:visited {
+  color: #FFFFFA;
+}
+
+nav a.selected, nav a:hover {
+  opacity: 1;
+  color: #342E37;
+  font-weight: regular;
+}
+
+
+/******************************
+          Slick Carousel
+/*******************************/
+
+.slickSlidesOuter {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  background-image: linear-gradient(transparent 20%, lightgray, white);
+}
+
+.slickSlides {
+width: 100%;
+}
+
+.slick-dots li button:before{
+  position: absolute;
+  font-size: 5px;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+
+.slick-prev:before,
+.slick-next:before
+{
+color: gray;
+font-size: 40px;
+  }
+
+.slick-slide {
+  width: 100%;
+  height: auto;
+  /*height: 460px;*/
+}
+
+.slick-slide img
+{
+
+
+}
+
+
+
+
+
+
+
+
 
 
 .noMargins {
@@ -82,54 +161,9 @@ footer {
 }
 
 .headshotForm {
-/*  display: inline;*/
-/*  text-align: left;*/
-/*  float: left;*/
   opacity: .9;
   height: 220px;
   border-radius: 2%;
-}
-
-
-
-
-ul {
-  list-style: none;
-  margin: 0;
-  text-align: center;
-  padding-left: 0;
-}
-
-li {
-  display: inline;
-  text-transform: uppercase;
-
-}
-
-.primary-content {
-  display: block;
-  margin: 0 auto 0 auto;
-}
-
-
-
-a:link {
-  text-decoration: none;
-  color: inherit;
-}
-
-nav a {
-  padding: 0 2px;
-}
-
-nav a:visited {
-  color: black;
-}
-
-nav a.selected, nav a:hover {
-  opacity: 1;
-  color: purple;
-  font-weight: regular;
 }
 
 .center {
@@ -141,9 +175,224 @@ nav a.selected, nav a:hover {
 }
 
 
+.imageScale {
+  width: 100%;
+  height: auto;
+}
+
+
 /******************************
-        Social Media
+      Contact Page Form
 ******************************/
+/* Messy looking - will re-design. Perhaps a brief bio of Courtney & Janice with corresponding photos and then the contact form without profile pictures wrapped inside it */
+
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+input[type ="text"], input[type = "email"], input[type = "password"], textarea, select, button.ui-multiselect {  /*switch these up some? directly copied */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1) inset;
+    box-sizing: border-box;
+    padding: .5em;
+    transition: border .2s ease 0;
+    width: 100%;
+    margin-bottom: 17px;
+    font-size: 1em;
+}
+
+input:first-child{    /* targets the Name input (it's the first child of its parent element <form>) */
+  margin-top: 10px;
+}
+
+textarea {
+  height: 200px;
+}
+
+
+
+#cardFormContainer {
+    box-sizing: border-box;
+    min-width: 980px;
+    max-width: 1040px;
+    padding: 20px;
+    position: relative;
+    margin: 0 auto;
+    width: auto;
+}
+
+              #profileImage {
+                width: 170px;
+                height: 220px;
+                float: left;
+            }
+
+
+              #profileData {
+                  padding-top: 5px;
+                  padding-right: 20px;
+                  width: 50%;
+                  float: right;
+                  text-align: left;
+              }
+
+              #profileName {
+                word-wrap: break-word;
+                text-align: left;
+                padding-left: 10px;
+                margin-left: 10px;
+              }
+
+              #profileNameHome {
+                word-wrap: break-word;
+                text-align: left;
+                padding-left: 10px;
+                margin-left: 10px;
+                margin-top: 0;
+              }
+
+              #profileNameContact {
+                word-wrap: break-word;
+                text-align: left;
+                padding-left: 10px;
+                margin-left: 10px;
+                margin-top: 30px;
+              }
+
+              .agency {
+                margin-top: 15px;
+                margin-bottom: 5px;
+              }
+
+              .mobile {
+               /* text-shadow: .5px .5px 0 #000;*/
+                margin-top: 15px;
+              }
+
+
+
+.cardFormInner {
+    margin-top: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    height: 444px;
+}
+
+#cardContainer {
+    width: 50%;
+    float: left;
+        border-right: 1px solid #ddd;
+        box-sizing: border-box;
+}
+
+#contactMeProfile { 
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    vertical-align: baseline;
+    white-space: normal;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+#profileForm {
+  float: right;
+  width: 50%;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+
+/* sloppily indents the info in homepage contact card*/
+.infoIndent {
+  margin-left: 20px;
+}
+
+
+/******************************
+    Homepage Contact Form
+/******************************/
+
+input.homeForm, .homeForm {       /* temporary home page Contact Form (will later create custom form in shape of house?) */
+  font-size: .75em;
+  margin-bottom: 10px;
+}
+
+textarea.homeForm {
+  height: 80px;
+  margin-bottom: 0;
+}
+
+input.homeForm:first-child {
+  margin-top: 0;
+}
+
+.cardFormInnerHome {
+  padding: 10px;
+  border: 1px solid #ddd;
+  height: 220px;
+}
+
+.customerReviews {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.about {
+  margin-top: 200px;
+}
+
+
+/******************************
+      HOUSE Shaped Form
+******************************/
+/*Use Pseudo elements (:after) to try to achieve partial length borders, OR use absolutely positioned divs for each partial border http://stackoverflow.com/questions/8835142/any-way-to-declare-a-size-partial-border-to-a-box 
+Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would help your CSS skills but not necessarily the cleanest or proper way */
+
+/*.houseSky {
+  position: relative;
+  height: 500px;
+  width: auto;
+  background: #CEDFEF;
+  border-bottom: 15px solid black;
+}
+
+.houseBody {
+  margin: auto;
+  width: 375px;
+  height: 325px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-left: 15px solid black;
+  border-right: 15px solid black;
+}*/
+
+
+
+/******************************
+      Footer/Social Media
+******************************/
+
+
+footer {
+  background-color: rgba(0, 23, 31, .5);
+  height: 180px;
+  width: 100%;
+  color: #FFFFFA;
+}
 
 .socialTwitter {
   padding-top: 30px;
@@ -179,230 +428,17 @@ nav a.selected, nav a:hover {
 */
 
 
-/******************************
-      Card Form
-******************************/
-.clear:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-input[type ="text"], input[type = "email"], input[type = "password"], textarea, select, button.ui-multiselect {  /*switch these up some? directly copied */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1) inset;
-    box-sizing: border-box;
-    padding: .5em;
-    transition: border .2s ease 0;
-    width: 100%;
-    margin-bottom: 17px;
-    font-size: 1em;
-}
-
-input:first-child{    /* targets the Name input (it's the first child of it's parent element, Form) */
-  margin-top: 10px;
-}
-
-textarea {
-  height: 200px;
-}
-
-
-
-#cardFormContainer {
-    box-sizing: border-box;
-    min-width: 980px;
-    max-width: 1040px;
-    padding: 20px;
-    position: relative;
-    margin: 0 auto;
-    width: auto;
-}
-
-              #profileImage {
-                width: 170px;
-                height: 220px;
-                float: left;
-            }
-
-
-              #profileData {
-                  padding-top: 5px;
-                  padding-right: 20px;
-                  width: 50%;
-                  float: right;
-                  text-align: left;
-                  /*float: right;*/  /*inconsistent w/ example - he has this as float:left;*/
-              }
-
-              #profileName {
-                word-wrap: break-word;
-                text-align: left;
-                padding-left: 10px;
-                margin-left: 10px;
-              }
-
-              #profileName2 {
-                word-wrap: break-word;
-                text-align: left;
-                padding-left: 10px;
-                margin-left: 10px;
-                margin-top: 30px;
-              }
-
-              .agency {
-                margin-top: 15px;
-                margin-bottom: 5px;
-              }
-
-              .mobile {
-               /* text-shadow: .5px .5px 0 #000;*/
-                margin-top: 15px;
-              }
-
-
-
-.cardFormInner {
-    padding: 10px;
-    border: 1px solid #ddd;
-    height: 444px;
-}
-
-#cardContainer {   /* remove .agentContactForm if you dont use! (directly copied) */
-    width: 50%;
-    float: left;
-        border-right: 1px solid #ddd;
-        box-sizing: border-box;
-}
-
-#contactMeProfile {           /* directly copied */
-    font-family: inherit;
-    font-size: 100%;
-    font-weight: inherit;
-    font-style: inherit;
-    vertical-align: baseline;
-    white-space: normal;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
-}
-
-#profileForm {
-  float: right;
-  width: 50%;
-      vertical-align: middle;
-
-    box-sizing: border-box;
-    padding-left: 20px;
-    /*position: relative;*/
-    /*z-index: 1;*/ /*leave out bc direct copy and doesnt break without it */
-}
-
-/*.sendButton {
-font-size: 1em;
-border-radius: 10%;
-}*/
-
-/* sloppily indents the info in homepage contact card*/
-.infoIndent {
-  margin-left: 20px;
-}
-
-
-
-
-
-/******************************
-          Slick Styles
-/*******************************/
-
-.slickSlidesOuter {
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 70px;
-  background-image: linear-gradient(transparent 20%, lightgray, white);
-}
-
-
-/*.grayBar {
-background-image: linear-gradient(lightgray, transparent 90%);
-content: '';
-width: 100%;
-height: 140px;
-}*/
-
-/*.slickSlidesOuter::after {
-  content: ''; 
-  padding-bottom: 70px;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(#ff8949, transparent 90%);
-
-    position:absolute;
-    z-index:-1;
-
-    border-radius: 100%;
-    content: '';
-    background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-    padding: 10px;
-    width: 100%;
-    height:100%;
-    top: -10px;
-    left: -10px;
-    position:absolute;
-    z-index:-1;
-}*/
-
-.slickSlides {
-width: 100%;
-}
-
-.slick-dots li button:before{
-  position: absolute;
-  font-size: 5px;
-}
-
-.slides {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto 40px;
-  text-align: center;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-}
-
-
-.slick-prev:before,
-.slick-next:before
-{
-color: gray;
-font-size: 40px;
-  }
-
-.slick-slide {
-  height: 460px;
-}
-
-.slick-slide img
-{
-
-
-}
 
 
 
 /* Media Queries ------------------ */
 
 @media screen and (max-width: 768px) {
+
+  header {
+    height: 420px;
+  }
+
 
   .headerBalloon {
     display: block;
@@ -414,6 +450,7 @@ font-size: 40px;
   .main-header-h1 {
     position: static;
     font-size: 6em;
+    padding-top: 10px;
     }
 
     .slickSlidesOuter {
@@ -467,25 +504,4 @@ font-size: 40px;
 
 
 }
-
-
-  
-/* nav {
-  margin-top: 30px;
-    display: block;
-    margin: 0 auto;
-    
-  }
-}*/
-
-/* Floated Clearfix ------------------ */
-
-/*
-.group:after {
-  content: “ “;
-  display: table;
-  clear: both; 
-}
-*/
-
 
