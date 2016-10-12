@@ -10,6 +10,11 @@ body {
   text-align: center;
 }
 
+body:after {    /* pre-load hover images to avoid first time load delay when hovering over social icons */
+ display:none;
+ content: url(../media/social/twitterHoverNew.png) url(../media/social/facebookHoverNew.png);
+}
+
 .wrap {
   min-height: calc(100vh - 180px);
 }
