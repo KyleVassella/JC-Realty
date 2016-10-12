@@ -17,12 +17,20 @@ body {
 
 header {
 /*  background-color: pink;*/
-  background-color: rgba(0, 23, 31, .5);        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
+  background-color: rgba(78, 0, 0, 1);        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
 /*  opacity: .6;*/
   height: 328px;   /*160px*/
 /*  margin: 0;*/
   padding: 0;
 }
+
+/*.headerCyFair {
+  display: inline;
+  padding: 0;
+  float: left;
+
+  margin: 0;
+}*/
 
 .headerBalloon {
   display: inline-block;
@@ -82,7 +90,7 @@ nav a:visited {
 
 nav a.selected, nav a:hover {
   opacity: 1;
-  color: #342E37;
+  color: #C52233;
   font-weight: regular;
 }
 
@@ -186,6 +194,10 @@ font-size: 40px;
 ******************************/
 /* Messy looking - will re-design. Perhaps a brief bio of Courtney & Janice with corresponding photos and then the contact form without profile pictures wrapped inside it */
 
+/*main {
+  background-color: #f5f8fa;
+}*/
+
 .clear:after {
     content: ".";
     display: block;
@@ -284,6 +296,7 @@ textarea {
 }
 
 #cardContainer {
+    background-color: #f5f8fa;
     width: 50%;
     float: left;
         border-right: 1px solid #ddd;
@@ -306,6 +319,7 @@ textarea {
 }
 
 #profileForm {
+  background-color: #f5f8fa;
   float: right;
   width: 50%;
   vertical-align: middle;
@@ -367,7 +381,6 @@ Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would 
   background: #CEDFEF;
   border-bottom: 15px solid black;
 }
-
 .houseBody {
   margin: auto;
   width: 375px;
@@ -388,7 +401,7 @@ Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would 
 
 
 footer {
-  background-color: rgba(0, 23, 31, .5);
+  background-color: rgba(78, 0, 0, 1);;
   height: 180px;
   width: 100%;
   color: #FFFFFA;
@@ -399,11 +412,11 @@ footer {
   width: 60px;
   height:60px;
   display: inline-block;
-  background:transparent url('../media/twitter-wrap.png') center no-repeat;
+  background:transparent url('../media/social/twitterNew2.png') center no-repeat;
 }
 
 .socialTwitter:hover {
-  background-image: url('../media/twitter-wrapHover.png');
+  background-image: url('../media/social/twitterHoverNew.png');
 }
 
 .socialFacebook {
@@ -411,11 +424,11 @@ footer {
   width: 60px;
   height:60px;
   display: inline-block;
-  background:transparent url('../media/facebook-wrap.png') center no-repeat;
+  background:transparent url('../media/social/facebookNew2.png') center no-repeat;
 }
 
 .socialFacebook:hover {
-  background-image: url('../media/facebook-wrapHover.png');
+  background-image: url('../media/social/facebookHoverNew.png');
 }
 
 
@@ -439,6 +452,13 @@ footer {
     height: 420px;
   }
 
+  .headerCyFair {
+    display: none;
+  }
+
+  .headerHouse {
+    display: none;
+  }
 
   .headerBalloon {
     display: block;
@@ -504,4 +524,3 @@ footer {
 
 
 }
-
