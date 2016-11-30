@@ -1,165 +1,12 @@
 * {
-  font-family: 'Raleway', sans-serif;
-      font-weight: 400;
+  font-family: 'Open Sans', sans-serif;     /* raleway was original font */
+      font-weight: 300;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-body:after {    /* pre-load hover images to avoid first time load delay when hovering over social icons */
- display:none;
- content: url(../media/social/twitterHoverNew.png) url(../media/social/facebookHoverNew.png);
-}
-
-.wrap {
-  min-height: calc(100vh - 180px);
-}
-
-
-header {
-/*  background-color: pink;*/
-  background-color: rgba(78, 0, 0, 1);        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
-/*  opacity: .6;*/
-  height: 328px;   /*160px*/
-/*  margin: 0;*/
-  padding: 0;
-}
-
-/*.headerCyFair {
-  display: inline;
-  padding: 0;
-  float: left;
-
-  margin: 0;
-}*/
-
-.headerBalloon {
-  display: inline-block;
-  position: relative;
-  bottom: -30px;
-  left: 10px;
-/*  float: left;
-padding-left: 200px;*/
-  width: 200px;
-  opacity: .8;
-/*  margin-left: 20px;
-  margin-top: 20px;*/
-}
-
-
-.main-header-h1 {
-  position: relative;
-  font-size: 6em;
-  left: -70px;
-  /*color: rgb(102, 102, 102);*/
-  opacity: 1;
-  color: #FFFFFA;
-  }
-
-
-nav {
-margin-top: 15px;
-margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  text-align: center;
-  padding-left: 0;
-}
-
-li {
-  display: inline;
-  text-transform: uppercase;
-
-}
-
-
-a:link {
-  text-decoration: none;
-  color: #FFFFFA;
-}
-
-nav a {
-  padding: 0 2px;
-}
-
-nav a:visited {
-  color: #FFFFFA;
-}
-
-nav a.selected, nav a:hover {
-  opacity: 1;
-  color: #C52233;
-  font-weight: regular;
-}
-
-
-/******************************
-          Slick Carousel
-/*******************************/
-
-.slickSlidesOuter {
-  width: 100%;
-  margin: 0 auto;
-  padding-bottom: 70px;
-  background-image: linear-gradient(transparent 20%, lightgray, white);
-}
-
-.slickSlides {
-width: 100%;
-}
-
-.slick-dots li button:before{
-  position: absolute;
-  font-size: 5px;
-}
-
-.slides {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto 40px;
-  text-align: center;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-}
-
-
-.slick-prev:before,
-.slick-next:before
+html,body        /*fix whitespace on right side*/
 {
-color: gray;
-font-size: 40px;
-  }
-
-.slick-slide {
-  width: 100%;
-  height: auto;
-  /*height: 460px;*/
+  overflow-x: hidden; 
 }
-
-.slick-slide img
-{
-
-
-}
-
-
-
-
-
-
-
-
-
 
 .noMargins {
   margin: 0;
@@ -187,10 +34,237 @@ font-size: 40px;
   text-align: right;
 }
 
+.fw300 {
+font-weight: 300;
+}
 
-.imageScale {
-  width: 100%;
+.fw600 {
+font-weight: 600;
+}
+
+.border {
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #000000;
+    margin: 0 auto 43.16px auto;
+}
+
+.isHidden {
+  display: none;
+}
+
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body:after {    /* pre-load hover images to avoid first time load delay when hovering over social icons */
+ display:none;
+ content: url(../media/social/twitterHoverNew.png) url(../media/social/facebookHoverNew.png);
+}
+
+.wrap {         
+  min-height: calc(100vh - 180px);
+}
+
+
+header {
+/*  background-color: pink;*/
+  background-color: rgba(48, 48, 48, 1); /*rgba(78, 0, 0, 1);*/        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
+/*  opacity: .6;*/
+  height: 100px;   /*160px, 328px*/ 
+/*  margin: 0;*/
+  padding: 0;
+}
+
+
+.main-header-h1 {
+  float: left;
+  font-size: 3.5em;
+  /*color: rgb(102, 102, 102);*/
+  opacity: 1;
+  color: #FFFFFA;
+  height: 100px;
+  }
+
+.headerLogo {
+  position: relative;
+  bottom: 5px;
+  left: 3px;
+}
+
+.headerTitle {
+  position: relative;
+  bottom: 36px;
+  left: 18px;
+}
+
+
+nav {
+position: relative;
+top: 45px;
+right: 23px;
+font-size: 1.4em;
+float: right;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  padding-left: 0;
+}
+
+li {
+  display: inline;
+  text-transform: uppercase;
+
+}
+
+
+a:link {
+  text-decoration: none;
+  color: #FFFFFA;
+}
+
+nav a {
+  padding: 0 8px;
+}
+
+nav a:visited {
+  color: #FFFFFA;
+}
+
+nav a.selected, nav a:hover {
+  opacity: 1;
+  color: #C52233;
+  font-weight: regular;
+}
+
+main {
+  clear: both;    /* clears float from the flaot:left header */
+}
+
+
+/******************************
+          Slick Carousel
+/*******************************/
+
+.slickSlidesOuter {
+/*  width: 100%;*/
+  margin: 0 auto;
+  padding-bottom: 70px;
+/*  background-image: linear-gradient(transparent 20%, lightgray, white);*/
+}
+
+.slickSlides {
+/*width: 100%;*/
+/*background-size: cover;*/
+}
+
+/*.slick-dots li button:before{
+  position: absolute;
+  font-size: 7px;
+}*/
+
+.slides {
+ /* width: 100%;*/
+/*  height: 100%;*/
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.slide {
+/*  width: 100%;*/
+/*  height: 100%;*/
+}
+
+/* -------------------------------------ARROWS */
+
+.slick-prev:before,
+.slick-next:before
+{
+color: gray;
+font-size: 80px;
+  }
+
+.slick-slide {
+/*  width: 100%;*/
+/*  height: auto;*/
+  /*height: 460px;*/
+}
+
+
+
+
+.item{
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: calc(100vh - 100px);
+}
+
+.slideImg1 {
+  background-image: url('../media/slickImages/built4RASTERWeb.gif');
+}
+
+.slideImg2 {
+  background-image: url('../media/slickImages/slickKitchenCropLeftRASTERWeb.gif');
+
+
+}
+
+.slideImg3 {
+  background-image: url('../media/slickImages/BackyardLARGEWeb2.gif');
+
+}
+
+
+
+
+/******************************
+      Featured Properties
+******************************/
+
+.featuredProperties {
+  margin-bottom: 100px;
+}
+
+.segmentTitle {
+  font-size: 52px;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+}
+
+.thumbRow {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: inline;
+}
+
+.thumbRow1 {
+  display: inline;
+}
+
+.thumbRow2 {
+  display: inline;
+}
+
+.thumbImg {
+  width: 25%;
   height: auto;
+}
+
+.thumbImg:hover {
+  opacity: .7;
+/*  background-color: rgba(113, 181, 228, .9);
+  background-size: 500px 500px;*/
 }
 
 
@@ -263,6 +337,7 @@ textarea {
                 text-align: left;
                 padding-left: 10px;
                 margin-left: 10px;
+                margin-bottom: 10px;
               }
 
               #profileNameHome {
@@ -278,7 +353,8 @@ textarea {
                 text-align: left;
                 padding-left: 10px;
                 margin-left: 10px;
-                margin-top: 30px;
+                margin-top: 15px;
+                margin-bottom: 10px;
               }
 
               .agency {
@@ -298,6 +374,7 @@ textarea {
     padding: 10px;
     border: 1px solid #ddd;
     height: 444px;
+    background-color: #f5f8fa;
 }
 
 #cardContainer {
@@ -349,7 +426,7 @@ input.homeForm, .homeForm {       /* temporary home page Contact Form (will late
 }
 
 textarea.homeForm {
-  height: 80px;
+  height: 70px;
   margin-bottom: 0;
 }
 
@@ -361,6 +438,7 @@ input.homeForm:first-child {
   padding: 10px;
   border: 1px solid #ddd;
   height: 220px;
+  background-color: #f5f8fa;
 }
 
 .customerReviews {
@@ -406,7 +484,7 @@ Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would 
 
 
 footer {
-  background-color: rgba(78, 0, 0, 1);;
+  background-color: rgba(48, 48, 48, 1);
   height: 180px;
   width: 100%;
   color: #FFFFFA;
@@ -451,63 +529,115 @@ footer {
 
 /* Media Queries ------------------ */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1176px) {  /*-------Ipad (768) and narrow desktop*/
+
+  nav {
+      display: none;
+    }
 
   header {
-    height: 420px;
-  }
-
-  .headerCyFair {
-    display: none;
-  }
-
-  .headerHouse {
-    display: none;
-  }
-
-  .headerBalloon {
-    display: block;
-    margin: 0 auto;
-    position: static;
-    text-align: center;
+    height: 180px;
   }
 
   .main-header-h1 {
-    position: static;
-    font-size: 6em;
-    padding-top: 10px;
+    float: none;
     }
 
-    .slickSlidesOuter {
-    width: 100%;
-  } 
+  .headerLogo {
+    position: static;
+  }
 
-  .slick-slide {
+  .headerTitle {
+    display: block;
+    left: 0;    /* re-set headerTitle's position left alignment to 0 */
+    bottom: 30px;
+    margin: 0 auto;
+  }
+
+  .mobileNav {
+    position: static;
+    display: block;
+    background-color: rgba(48, 48, 48, 1);
+    z-index: 1;
+    text-align: center;
+    width: 100vw;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* show mobile carousel, hide parallax */
+  .slickSlidesOuter {
+    display: none;
+  }
+
+  .imageScale {
+    width: 100%;
     height: auto;
   }
 
+  .slickSlidesMobile {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    } 
+
+    .slick-slide {
+      height: auto;
+    }
+
     .slick-slide img {
-      max-width:100%;
+      max-width: 100%;
       height: auto;
       display: block;
   }
 
+
+
+
+.thumbRow {
+
+  padding: 0;
+  margin: 0;
+}
+
+.thumbRow1 {
+  display: block;
+  font-size: 0;
+}
+
+.thumbRow2 {
+  display: block;
+  font-size: 0;
+}
+
+.thumbImg {
+  width: 50%;
+  height: auto;
 }
 
 
-@media screen and (max-width: 667px) {
 
-  .headerBalloon {
-    display: block;
-    margin: 0 auto;
-    position: static;
-    text-align: center;
+}
+
+
+@media screen and (max-width: 667px) {      /* -------- Iphone*/
+
+  header {
+    height: 140px;
   }
 
   .main-header-h1 {
-    position: static;
-    font-size: 4.5em;
+    font-size: 2.75em;
     }
+
+  .mobileNav {
+    height: auto;
+    font-size: 1em;
+    padding: 10px 0 5px 0;
+  }
 
   .slickSlidesOuter {
     width: 100%;
@@ -521,11 +651,23 @@ footer {
     max-width:100%;
     height: auto;
     display: block;
-}
+  }
 
   #cardFormContainer {
     display: none;
   }
 
+
+}
+
+@media screen and (max-width: 423px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
+
+  .main-header-h1 {
+    font-size: 2.3em;
+  }
+
+  .headerTitle {
+    bottom: 25px;
+  }
 
 }

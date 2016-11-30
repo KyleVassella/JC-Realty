@@ -1,12 +1,15 @@
 <!-- IMPROVEMENTS
+• Create responsive mobile nav
+• Bug: **(may be due to local hosting) sometimes (1/5 chance) slick carousel loads as 3 partial images stacked vertically on one another, rather than usual carousel. Happned after I integrated the carousel with parallaxed scrolling CSS.
+• How to move hero image to the left (off teh screen) when window size is reduced, rather than constatnly trying  to keep image same size as screen? 
+• Sticky header (without un-ideal snapback effect on Valerie's)
+• 1px white line on right side of hero image
+• Messed up thumbnails (left side, margin-top not working, etc. Try putting divs around each image)
 • Chrome glitch where 'JC REALTY' header flashes quickly at very top of page before dissapearing and reappearing in proper spot?
-• Get rid of thick header and get a big, hi res background image in there. 
-• Redo twitter/fb icons in PS, use more feathering
 • Better, full width SVG's for photos - convert w/ AI Image Trace? (quality won't be ideal). Perhaps take new wide angle photos yourself
 • House shaped or yard sign shaped ('Send' in red letters instead of 'SOLD' hanging from bottom), transparent remax yard sign background contact form. Could also be a project for your CodePen. ABSTRACT HOUSE/YARD W TREES GOING ALL THE WAY ACROSS PAGE creating a border for new section? COULD BE SICK. SEE PHOTO ABSTRACTHOUSEWITHFLOOR. WHEN FORM SENT, SMOKE LINES COME OUT OF THE CHIMNEY, EITHER ANIMATED OR NOT AND STAY THERE TO SHOW THAT YOUR FORM SENT (ALONG W/ 'Thank you' message). Would help a lot with your CSS. 
 #CEDFEF or similar for header bg/sky, make balloon logo color, sky leads down to the house/grass or at least the new section.
 • Form should be contact us only - no photos
-• Color scheme (lol)
 • Overall design needs to be more professional, interesting, custom (with time young padowan)
 • Picture shadows on profile pics?
 • Add a backup font in case Google font goes offline
@@ -23,125 +26,158 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>J&C Realty | Cypress Real Estate</title>
-  <link rel="stylesheet" href="js/slick/slick.css">
-  <link rel="stylesheet" href="js/slick/slick-theme.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+	<head>
+  		<meta charset="utf-8">
+  		<title>REMAX Janice & Courtney | Cypress Real Estate</title>
+  		<link rel="stylesheet" href="js/slick/slick.css">
+ 		<link rel="stylesheet" href="js/slick/slick-theme.css">
+  		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
 
   
-</head>
+	</head>
 
-<body>
-<!-- 	<div class="wrap"> -->
+	<body>
+		<div class="wrap">
 
-	  <header class="group">
-
-
-<!-- 		<img class="headerCyFair"src="media/header/CyFairHeader.png"> -->
-
-	      <h1 class="main-header-h1 noMargins">
-	      	<img class="headerBalloon" src="media/Standard_Balloon_Logo_BW_LineDrawing_WhiteBack_Web2.gif">J<span style="font-weight: 100;">&</span>C Realty
-	      	</h1>
-<!-- 	      <img class="headerHouse"src="media/header/HeaderHouse.png"> -->
+		  <header>
 
 
-	      <nav>
-	        <ul>
-	          <li><a href="index.html">Home</a></li>
-	          <li><a href="listings.html">Listings</a></li>
-	          <li><a href="about.html">About</a></li>
-	          <li><a href="contact.html">Contact</a></li>
-	        </ul>
-	      </nav>
-	 
-	  </header>
-	  <main>
-		                   <!-- slick begin-->
-		<div class="slickSlidesOuter"> 
-		   <div class="slickSlides">
-		    <div><img class="imageScale" src="media/slickImages/built4RASTERWeb.gif"></div>
-		    <div><img class="imageScale" src="media/slickImages/slickKitchenCropLeftRASTERWeb.gif"></div>
-		    <div><img class="imageScale" src="media/slickImages/BackyardLARGEWeb2.gif"></div>
-		  </div>
+	<!-- 		<img class="headerCyFair"src="media/header/CyFairHeader.png"> -->
+
+		      <h1 class="main-header-h1 noMargins">
+		      	<img class="headerLogo" src="media/Logos/remaxpgLOGO.png">
+		      	<span class="headerTitle fw300">JANICE <span class="fw300">& </span>COURTNEY</span>
+		      	</h1>
+	<!-- 	      <img class="headerHouse"src="media/header/HeaderHouse.png"> -->
+
+
+		      <nav>
+		        <ul>
+		          <li><a href="index.html">Home</a></li>
+		          <li><a href="listings.html">Listings</a></li>
+		          <li><a href="about.html">About</a></li>
+		          <li><a href="contact.html">Contact</a></li>
+		        </ul>
+		      </nav>
+		  </header>
+		  	<nav class="mobileNav isHidden">
+		        <ul>
+		          <li><a href="index.html">Home</a></li>
+		          <li><a href="listings.html">Listings</a></li>
+		          <li><a href="about.html">About</a></li>
+		          <li><a href="contact.html">Contact</a></li>
+		        </ul>
+		      </nav>
+
+			<main>
+				                   <!-- slick begin-->
+				<div class="slickSlidesOuter"> 
+				   <div class="slickSlides">
+	<!-- 			   <span class="prev"></span> -->
+				    <div class="item slideImg1"></div>
+				    <div class="item slideImg2"></div>
+				    <div class="item slideImg3"></div>
+		<!-- 		    <span class="next"></span> -->
+				  </div>
+				</div>
+				<!-- slick end-->
+
+			<!-- Mobile slick begin-->
+			<div class="slickSlidesMobile isHidden"> 
+			   <div class="slickSlides">
+			    <div><img class="imageScale" src="media/slickImages/built4RASTERWeb.gif"></div>
+			    <div><img class="imageScale" src="media/slickImages/slickKitchenCropLeftRASTERWeb.gif"></div>
+			    <div><img class="imageScale" src="media/slickImages/BackyardLARGEWeb2.gif"></div>
+			  </div>
+			</div>
+			<!-- Mobile slick end-->
+
+			    
+				<div class = "featuredProperties">
+					<h2 class="segmentTitle fw300"> FEATURED PROPERTIES </h2>
+					<span class="border"></span>
+					<div class="thumbRow">
+						<div class="thumbRow1"><a href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumbImg" src="media/propertyThumb1.jpg"></a><a 
+						href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumbImg" src="media/propertyThumb1_2.jpg"></a></div><div class="thumbRow2"><a
+						href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumbImg" src="media/propertyThumb3.jpg"></a><a 
+						href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumbImg" src="media/propertyThumb1_3.jpg"></a></div>
+					</div>
+				</div>
+
+
+
+
+
+
+				 <section id = "cardFormContainer">
+				     <h2 class="segmentTitle fw300"> CONTACT US </h2>
+				     <span class="border"></span>
+					    <div class = "cardFormInnerHome clear">
+					      
+					      <div id = "cardContainer">
+					        <div id="profileImage">
+					<!--               <img src="media/headshot.jpg" class="headshotForm"> -->
+					          <img src="media/JaniceHeadshotCOLOR.jpg" class="headshotForm">
+					        </div>
+					        <div id="profileData">
+					          <h2 id="profileNameHome">Janice DiVenanzo</h2>
+					          <div class ="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
+					          <div class="infoIndent">LISCENCE # 647619</div>
+					          <div class="agency infoIndent"><span style="font-weight: 700;">Office Location:</span></div>
+					          <div class="address infoIndent">13611 Skinner Rd<br> Cypress, TX 77429</div>
+					          <div class="mobile infoIndent"><span style="font-weight: 700;">Mobile:</span> 713-725-0878</div>
+					          <div class="office infoIndent"></div>
+					        </div>
+					      </div>
+					          
+					          <div id = "contactMeProfile">
+					            <form id = "profileForm" action = "" method = "post">
+					              <input class="homeForm" type="text" placeholder = "Name" name="user_name" value>
+					              <input class="homeForm" type="email" placeholder="Email Address" name="user_email" value>
+					              <input class="homeForm" type="text" placeholder = "Subject" name="user_subject" value>
+					              <textarea class="homeForm" placeholder="Message" name="user_message"></textarea>
+					              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>
+					            </form>
+					          </div>
+
+					    </div>
+				  </section>
+
+
+				  <div class="customerReviews">
+				    <h2 class="segmentTitle fw300">CUSTOMER REVIEWS</h2>
+				    <span class="border"></span>
+				    <p>Coming soon!</p>
+				  </div>
+
+			</main>
+
+		  <footer>
+		    <div class='center'>
+		        <a href = "https://twitter.com/Courtney_L_F" class = "socialTwitter" alt = "Twitter logo" target="_blank"></a>
+		        <a href = "https://www.facebook.com/pg/Janice-DiVenanzo-Realtor-421855624628445/posts/?ref=page_internal" class = "socialFacebook" alt = "Facebook logo" target="_blank"></a>
+		        <h4 class='noBottomMargin noTopMargin'>Courtney Farmer | 713-725-1637</h4>
+		    <p>&copy; 2016</p>
+		    </div>
+		  </footer>
+		  <script src="js/jquery-3.1.0.min.js"></script>
+		  <script src="js/slick/slick.min.js"></script> 
+		 <!--    <script src="js/app.js"</script>  -->
+		  <script>
+		    $('.slickSlides').slick({
+		      arrows: true,
+		      dots: true,
+		      infinite: true,
+		      speed: 350,
+		      fade: true,
+		      cssEase: 'linear',
+		      autoplay: true,
+		      autoplaySpeed: 5000
+		      // appendArrows: $('.arrowAttach')
+		    });
+		  </script>
 		</div>
-		<!-- slick end-->
-
-	    
-
-		 <section id = "cardFormContainer">
-     <h1> Contact us: </h1>
-		    <div class = "cardFormInnerHome clear">
-		      
-		      <div id = "cardContainer">
-		        <div id="profileImage">
-		<!--               <img src="media/headshot.jpg" class="headshotForm"> -->
-		          <img src="media/JaniceHeadshotCOLOR.jpg" class="headshotForm">
-		        </div>
-		        <div id="profileData">
-		          <h2 id="profileNameHome">Janice DiVenanzo</h2>
-		          <div class ="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
-		          <div class="infoIndent">LISCENCE # 647619</div>
-		          <div class="agency infoIndent"><span style="font-weight: 700;">Office Location:</span></div>
-		          <div class="address infoIndent">13611 Skinner Rd<br> Cypress, TX 77429</div>
-		          <div class="mobile infoIndent"><span style="font-weight: 700;">Mobile:</span> 713-725-0878</div>
-		          <div class="office infoIndent"></div>
-		        </div>
-		      </div>
-
-
-	          
-	          <div id = "contactMeProfile">
-	            <form id = "profileForm" action = "" method = "post">
-	              <input class="homeForm" type="text" placeholder = "Name" name="user_name" value>
-	              <input class="homeForm" type="email" placeholder="Email Address" name="user_email" value>
-	              <input class="homeForm" type="text" placeholder = "Subject" name="user_subject" value>
-	              <textarea class="homeForm" placeholder="Message" name="user_message"></textarea>
-	              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>
-	            </form>
-	          </div>
-
-	        </div>
-
-	      </section>
-
-
-	          <div class="customerReviews">
-	            <h2>Customer Reviews:</h2>
-	            <p>Coming soon!</p>
-	          </div>
-
-	  </main>
-
-	  <footer>
-	    <div class='center'>
-	        <a href = "https://twitter.com/Courtney_L_F" class = "socialTwitter" alt = "Twitter logo" target="_blank"></a>
-	        <a href = "https://www.facebook.com/pg/Janice-DiVenanzo-Realtor-421855624628445/posts/?ref=page_internal" class = "socialFacebook" alt = "Facebook logo" target="_blank"></a>
-	        <h4 class='noBottomMargin noTopMargin'>Courtney Farmer | 713-725-1637</h4>
-	    <p>&copy; 2016</p>
-	    </div>
-	  </footer>
-	  <script src="js/jquery-3.1.0.min.js"></script>
-	  <script src="js/slick/slick.min.js"></script> 
-	 <!--    <script src="js/app.js"</script>  -->
-	  <script>
-	    $('.slickSlides').slick({
-	      arrows: false,
-	      dots: true,
-	      infinite: true,
-	      speed: 350,
-	      fade: true,
-	      cssEase: 'linear',
-	      autoplay: true,
-	      autoplaySpeed: 5000
-	      // appendArrows: $('.arrowAttach')
-	    });
-	  </script>
-<!-- 	</div> -->
-</body>
+	</body>
 </html>
