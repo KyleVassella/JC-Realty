@@ -488,7 +488,7 @@ Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would 
 
 
 footer {
-  background-color: rgba(48, 48, 48, .85);
+  background-color: rgba(48, 48, 48, 1);
   height: 180px;
   width: 100%;
   color: #FFFFFA;
