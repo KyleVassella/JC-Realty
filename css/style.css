@@ -35,11 +35,15 @@ html,body        /*fix whitespace on right side*/
 }
 
 .fw300 {
-font-weight: 300;
+  font-weight: 300;
+}
+
+.fw400 {
+  font-weight: 400;
 }
 
 .fw600 {
-font-weight: 600;
+  font-weight: 600;
 }
 
 .border {
@@ -76,7 +80,7 @@ body:after {    /* pre-load hover images to avoid first time load delay when hov
 
 header {
 /*  background-color: pink;*/
-  background-color: rgba(48, 48, 48, 1); /*rgba(78, 0, 0, 1);*/        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
+  background-color: #FDFFFC;/*rgba(48, 48, 48, 1);*/ /*rgba(78, 0, 0, 1);*/        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
 /*  opacity: .6;*/
   height: 100px;   /*160px, 328px*/ 
 /*  margin: 0;*/
@@ -89,9 +93,9 @@ header {
   font-size: 3.5em;
   /*color: rgb(102, 102, 102);*/
   opacity: 1;
-  color: #FFFFFA;
+  color: rgba(48, 48, 48, 1);/*#FFFFFA;*/
   height: 100px;
-  }
+}
 
 .headerLogo {
   position: relative;
@@ -101,7 +105,7 @@ header {
 
 .headerTitle {
   position: relative;
-  bottom: 36px;
+  bottom: 38px;
   left: 18px;
 }
 
@@ -130,7 +134,7 @@ li {
 
 a:link {
   text-decoration: none;
-  color: #FFFFFA;
+  color: black; /*#FFFFFA;*/
 }
 
 nav a {
@@ -138,7 +142,7 @@ nav a {
 }
 
 nav a:visited {
-  color: #FFFFFA;
+  color: black;/*#FFFFFA;*/
 }
 
 nav a.selected, nav a:hover {
@@ -190,8 +194,8 @@ main {
 .slick-prev:before,
 .slick-next:before
 {
-color: gray;
-font-size: 80px;
+  color: gray;
+  font-size: 80px;
   }
 
 .slick-slide {
@@ -557,7 +561,7 @@ footer {
   .mobileNav {
     position: static;
     display: block;
-    background-color: rgba(48, 48, 48, 1);
+    background-color: #FDFFFC;
     z-index: 1;
     text-align: center;
     width: 100vw;
@@ -636,7 +640,7 @@ footer {
   .mobileNav {
     height: auto;
     font-size: 1em;
-    padding: 10px 0 5px 0;
+    padding: 12px 0 5px 0;
   }
 
   .slickSlidesOuter {
