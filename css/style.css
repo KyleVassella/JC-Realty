@@ -58,6 +58,14 @@ html,body        /*fix whitespace on right side*/
   display: none;
 }
 
+.steel {
+  background-color: rgba(48, 48, 48, 1);
+}
+
+.cream {
+  color: #FDFFFC;
+}
+
 
 
 

@@ -1,4 +1,9 @@
 <!-- IMPROVEMENTS
+
+*******IPAD BUGS*******
+- slick arrows dont respond and dissapear on pressing
+
+
 • Create responsive mobile nav
 • Bug: **(may be due to local hosting) sometimes (1/5 chance) slick carousel loads as 3 partial images stacked vertically on one another, rather than usual carousel. Happned after I integrated the carousel with parallaxed scrolling CSS.
 • How to move hero image to the left (off teh screen) when window size is reduced, rather than constatnly trying  to keep image same size as screen? 
@@ -133,14 +138,15 @@
 					        </div>
 					      </div>
 					          
-					          <div id = "contactMeProfile">
-					            <form id = "profileForm" action = "" method = "post">
-					              <input class="homeForm" type="text" placeholder = "Name" name="user_name" value>
-					              <input class="homeForm" type="email" placeholder="Email Address" name="user_email" value>
-					              <input class="homeForm" type="text" placeholder = "Subject" name="user_subject" value>
-					              <textarea class="homeForm" placeholder="Message" name="user_message"></textarea>
-					              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>
-					            </form>
+					          <div id="contactMeProfile">
+					            <form id="profileForm" action="php/email.php" method="post">
+					              <input class="homeForm" type="text" placeholder ="Name" name="name">
+					              <input class="homeForm" type="email" placeholder="Email Address" name="email">
+					              <input class="homeForm" type="text" placeholder="Subject" name="subject">
+					              <textarea class="homeForm" placeholder="Message" name="message"></textarea>
+					              <input type="submit" name="submit" id="submit" value="Submit">
+<!-- 					              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>
+ -->					            </form>
 					          </div>
 
 					    </div>

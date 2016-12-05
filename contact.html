@@ -55,7 +55,7 @@
               <div class="office infoIndent"></div>
 
                <h2 id="profileNameContact">Janice DiVenanzo</h2>
-              <div class ="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
+              <div class="infoIndent"><span style="font-weight: 700;">REMAX Realtor</span></div>
               <div class="infoIndent">LISCENCE # 647619</div>
               <div class="agency infoIndent"><span style="font-weight: 700;">Office Location:</span></div>
               <div class="address infoIndent">13611 Skinner Rd<br> Cypress, TX 77429</div>
@@ -66,13 +66,13 @@
 
 
           
-          <div id = "contactMeProfile">
-            <form id = "profileForm" action = "" method = "post">
-              <input type="text" placeholder = "Name" name="user_name" value>
-              <input type="email" placeholder="Email Address" name="user_email" value>
-              <input type="text" placeholder = "Subject" name="user_subject" value>
-              <textarea placeholder="Message" name="user_message"></textarea>
-              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>
+          <div id="contactMeProfile">
+            <form id="profileForm" action ="php/email.php" method ="post">
+              <input type="text" placeholder ="Name" name="name">
+              <input type="email" placeholder="Email Address" name="email">
+              <input type="text" placeholder ="Subject" name="subject">
+              <textarea placeholder="Message" name="message"></textarea>
+              <input type="submit" name="submit" id="submit" value="Submit">
             </form>
           </div>
 
