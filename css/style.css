@@ -82,7 +82,7 @@ body:after {    /* pre-load hover images to avoid first time load delay when hov
 }
 
 .wrap {         
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 95px);
 }
 
 
@@ -497,7 +497,7 @@ Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would 
 
 footer {
   background-color: rgba(36, 36, 36, 1); /*48 48 48 1*/
-  height: 180px;
+/*  height: 180px;*/
   width: 100%;
   color: #FFFFFA;
 }
