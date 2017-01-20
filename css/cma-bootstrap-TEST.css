@@ -1,0 +1,151 @@
+/***************** JC-Realty CSS *****************/
+
+.is-hidden {
+  display: none;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.no-margins {
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(48, 48, 48, 1);
+}
+
+header {
+/*  background-color: pink;*/
+  background-color: #FDFFFC;/*rgba(48, 48, 48, 1);*/ /*rgba(78, 0, 0, 1);*/        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
+/*  opacity: .6;*/
+  height: 100px;   /*160px, 328px*/ 
+/*  margin: 0;*/
+  padding: 0;
+}
+
+
+.main-header-h1 {
+  float: left;
+  font-size: 4em;
+
+  /*color: rgb(102, 102, 102);*/
+  opacity: 1;
+  color: rgba(48, 48, 48, 1);/*#FFFFFA;*/
+  height: 100px;
+}
+
+.header-logo {
+  position: relative;
+  bottom: 5px;
+  left: 3px;
+}
+
+.header-title {
+  position: relative;
+  top: 3px;
+  left: 18px;
+  overflow: hidden;
+}
+
+
+nav {
+position: relative;
+top: 45px;
+right: 23px;
+font-size: 1.6em;
+float: right;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  padding-left: 0;
+}
+
+li {
+  display: inline;
+  text-transform: uppercase;
+
+}
+
+
+a:link {
+  text-decoration: none;
+  color: black; 
+}
+
+nav a {
+  padding: 0 8px;
+}
+
+nav a:visited {
+  color: black;
+}
+
+nav a.selected, nav a:hover {
+  opacity: 1;
+  color: #C52233;
+  font-weight: regular;
+}
+
+
+.cma-main {
+  margin-top: 50px;
+}
+
+.cma-title {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+
+
+footer {
+  background-color: rgba(36, 36, 36, 1); /*48 48 48 1*/
+  height: 95px;
+  width: 100%;
+  color: #FFFFFA;
+}
+
+.social-twitter {
+  margin-top: 15px;
+  width: 60px;
+  height:60px;
+  display: inline-block;
+  background:transparent url('../media/social/twitterNew2.png') center no-repeat;
+}
+
+.social-twitter:hover {
+  background-image: url('../media/social/twitterHoverNew.png');
+}
+
+.social-facebook {
+  width: 60px;
+  height:60px;
+  display: inline-block;
+  background:transparent url('../media/social/facebookNew2.png') center no-repeat;
+}
+
+.social-facebook:hover {
+  background-image: url('../media/social/facebookHoverNew.png');
+}

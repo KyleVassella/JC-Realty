@@ -8,6 +8,15 @@ html,body        /*fix whitespace on right side*/
   overflow-x: hidden; 
 }
 
+a {
+  color: rgba(48, 48, 48, 1);
+  text-decoration: none;
+}
+
+.clear-both {
+  clear: both;
+}
+
 .no-margins {
   margin: 0;
 }
@@ -66,7 +75,16 @@ html,body        /*fix whitespace on right side*/
   color: #FDFFFC;
 }
 
+/*Floated CLEARFIX*/
+.group:after {
+  content: “ “;
+  display: table;
+  clear: both;
+}
 
+.text-align-initial {
+  text-align: initial;
+}
 
 
 html,
@@ -98,7 +116,7 @@ header {
 
 .main-header-h1 {
   float: left;
-  font-size: 3.5em;
+  font-size: 4em;
   /*color: rgb(102, 102, 102);*/
   opacity: 1;
   color: rgba(48, 48, 48, 1);/*#FFFFFA;*/
@@ -113,8 +131,9 @@ header {
 
 .header-title {
   position: relative;
-  bottom: 38px;
-  left: 18px;
+/*  bottom: 38px;*/
+  left: 15px;
+  overflow: hidden;
 }
 
 
@@ -122,7 +141,7 @@ nav {
 position: relative;
 top: 45px;
 right: 23px;
-font-size: 1.4em;
+font-size: 1.65em;
 float: right;
 }
 
@@ -175,6 +194,13 @@ main {
 /*  background-image: linear-gradient(transparent 20%, lightgray, white);*/
 }
 
+.slickSlidesOuter-review {
+/*  width: 100%;*/
+  margin: 0 auto;
+  padding-bottom: 70px;
+/*  background-image: linear-gradient(transparent 20%, lightgray, white);*/
+}
+
 .slickSlides {
 /*width: 100%;*/
 /*background-size: cover;*/
@@ -197,7 +223,7 @@ main {
 /*  height: 100%;*/
 }
 
-/* -------------------------------------ARROWS */
+/********* ARROWS *********/
 
 .slick-prev:before,
 .slick-next:before
@@ -212,14 +238,47 @@ main {
   /*height: 460px;*/
 }
 
+.carousel-menu {
+  font-size: 1.8em;
+}
+
+.carousel-menu div{
+  background-color: rgba(232, 230, 220, 1);
+/*  background-color: rgba(0, 0, 0, .1);*/
+/*  background-color: rgba(220, 220, 210, .9);*/
+
+  border-left: 1px solid #fff;
+  padding: 0;
+  height: 80px;
+  line-height: 80px;    /* allows you to put vertical-align: center; on your anchors */
+}
+
+.carousel-menu div:first-child{
+  border-left: 0;
+}
+
+
+.carousel-menu a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: center;
+}
+
+.carousel-menu a:hover {
+  padding: 0 16.5%;
+  color: #C52233;
+/*  font-weight: bolder;*/
+  background-color: rgba(192, 191, 182, 1);
+}
 
 
 
-.item{
+.cover{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 180px);
 }
 
 .slideImg1 {
@@ -280,10 +339,7 @@ main {
 }
 
 
-/******************************
-      Contact Page Form
-******************************/
-/* Messy looking - will re-design. Perhaps a brief bio of Courtney & Janice with corresponding photos and then the contact form without profile pictures wrapped inside it */
+
 
 /*main {
   background-color: #f5f8fa;
@@ -297,171 +353,143 @@ main {
     visibility: hidden;
 }
 
-input[type ="text"], input[type = "email"], input[type = "password"], textarea, select, button.ui-multiselect {  /*switch these up some? directly copied */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1) inset;
-    box-sizing: border-box;
-    padding: .5em;
-    transition: border .2s ease 0;
-    width: 100%;
-    margin-bottom: 17px;
-    font-size: 1em;
-}
-
-input:first-child{    /* targets the Name input (it's the first child of its parent element <form>) */
-  margin-top: 10px;
-}
-
-textarea {
-  height: 200px;
-}
 
 
-
-#card-form-container {
-    box-sizing: border-box;
-    min-width: 980px;
-    max-width: 1040px;
-    padding: 20px;
-    position: relative;
-    margin: 0 auto;
-    width: auto;
-}
-
-              #profile-image {
-                width: 170px;
-                height: 220px;
-                float: left;
-            }
-
-
-              #profile-data {
-                  padding-top: 5px;
-                  padding-right: 20px;
-                  width: 50%;
-                  float: right;
-                  text-align: left;
-              }
-
-              #profile-name {
-                word-wrap: break-word;
-                text-align: left;
-                padding-left: 10px;
-                margin-left: 10px;
-                margin-bottom: 10px;
-              }
-
-              #profile-name-home {
-                word-wrap: break-word;
-                text-align: left;
-                padding-left: 10px;
-                margin-left: 10px;
-                margin-top: 0;
-              }
-
-              #profile-name-contact {
-                word-wrap: break-word;
-                text-align: left;
-                padding-left: 10px;
-                margin-left: 10px;
-                margin-top: 15px;
-                margin-bottom: 10px;
-              }
-
-              .agency {
-                margin-top: 15px;
-                margin-bottom: 5px;
-              }
-
-              .mobile {
-               /* text-shadow: .5px .5px 0 #000;*/
-                margin-top: 15px;
-              }
-
-
-
-.card-form-inner {
-    margin-top: 100px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    height: 444px;
-    background-color: #f5f8fa;
-}
-
-#card-container {
-    background-color: #f5f8fa;
-    width: 50%;
-    float: left;
-        border-right: 1px solid #ddd;
-        box-sizing: border-box;
-}
-
-#contact-me-profile { 
-    font-family: inherit;
-    font-size: 100%;
-    font-weight: inherit;
-    font-style: inherit;
-    vertical-align: baseline;
-    white-space: normal;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
-}
-
-#profile-form {
-  background-color: #f5f8fa;
-  float: right;
-  width: 50%;
-  vertical-align: middle;
-  box-sizing: border-box;
-  padding-left: 20px;
-}
-
-
-/* sloppily indents the info in homepage contact card*/
-.info-indent {
-  margin-left: 20px;
-}
-
-
-/******************************
-    Homepage Contact Form
-/******************************/
-
-input.home-form, .home-form {       /* temporary home page Contact Form (will later create custom form in shape of house?) */
-  font-size: .75em;
-  margin-bottom: 10px;
-}
-
-textarea.home-form {
-  height: 70px;
-  margin-bottom: 0;
-}
-
-input.home-form:first-child {
-  margin-top: 0;
-}
-
-.card-form-inner-home {
-  padding: 10px;
-  border: 1px solid #ddd;
-  height: 220px;
-  background-color: #f5f8fa;
-}
-
-.customer-reviews {
+.reviews-carousel{
   margin-top: 100px;
-  margin-bottom: 100px;
+}
+
+.reviews-title {
+  background-color: rgba(232, 230, 220, 1);
+  font-size: 3em;
+  position: relative;
+  top: 60px;
+  padding-top: 15px;
+  z-index: 2;
+}
+
+.reviewSlides {
+  height: 300px;
+}
+
+.reviews {
+  height: 300px;
+  line-height: 300px;
+  background-color: rgba(232, 230, 220, 1);
+  font-size: 1.5em;
+  vertical-align: center;
+  /*padding-top: 100px;*/
+}
+
+/*.reviewSlides:before {
+  content: "What our clients are saying:" ;
+  font-size: 3em;
+  background-color: rgba(232, 230, 220, 1);
+  min-width: 100%;
+}*/
+
+
+
+.reviews-signature {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: .8em;
+  position: relative;
+  bottom: 270px;
+  left: 150px;
 }
 
 .about {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
+.about-courtney {
+  width: 100vw;
+  height: 398px;
+  line-height: 398px;
+  /*background-color: rgba(232, 230, 220, 1);*/
+  background-image: linear-gradient(to left, rgba(232, 230, 220, 1), rgba(255, 255, 255, 1));
+  margin-bottom: 50px;
+}
+
+.about-janice {
+  width: 100vw;
+  height: 398px;
+  line-height: 398px;
+  /*background-color: rgba(232, 230, 220, 1);*/
+  background-image: linear-gradient(to right, rgba(232, 230, 220, 1), rgba(255, 255, 255, 1));
+  margin-bottom: 50px;
+}
+
+.about-headshot-courtney {
+  float: right;
+}
+
+.about-headshot-janice {
+  float: left;
+}
+
+.about-headshot-sample {
+  background: url("../media/headshot-sample-cropped.png") no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 1000px;
+  /*line-height: 1000px;*/
+  margin-bottom: 150px;
+}
+
+.about-container {
+  display: inline-block;
+  position: relative;
+  left: 200px;
+  top: 300px;
+  font-size: 3em;
+  /*padding: 40px 20px;*/
+  width: 1000px;
+  padding: 0 20px;
+  background-color: rgba(255, 245, 253, .1);  /*2C302E **0B132B **1C2541 89, 101, 111, .9*/
+  border-radius: 15px;
+}
+
+.about-content {
+  font-size: 2.4em;
+}
+
+
+.cma-main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cma-form {
+  background-color: rgba(211,211,211, .5);
+  border-radius: 1%;
+}
+
+.cma-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 55px;
+}
+
+.cma-title h3 {
+  line-height: 35px;
+  font-weight: lighter;
+}
+
+
+.form-cma-margins{
+  width: 70%;
+  margin: 0 auto 100px auto;
+/*  display: table;*/
+/*    margin-right: -15px;
+  margin-left: -15px;*/
+
+}
+
+.inline {
+  display: inline;
+}
 
 /******************************
       HOUSE Shaped Form
@@ -497,13 +525,14 @@ Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would 
 
 footer {
   background-color: rgba(36, 36, 36, 1); /*48 48 48 1*/
-/*  height: 180px;*/
+  height: 80px;
   width: 100%;
   color: #FFFFFA;
 }
 
+
 .social-twitter {
-  padding-top: 30px;
+  margin-top: 10px;
   width: 60px;
   height:60px;
   display: inline-block;
@@ -515,7 +544,6 @@ footer {
 }
 
 .social-facebook {
-  padding-top: 30px;
   width: 60px;
   height:60px;
   display: inline-block;
@@ -540,6 +568,51 @@ footer {
 
 
 /* Media Queries ------------------ */
+
+                                                        @media screen and (max-width: 1340px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
+
+                                                            nav {
+                                                              display: none;
+                                                            }
+
+                                                            header {
+                                                              height: 180px;
+                                                            }
+
+                                                            .main-header-h1 {
+                                                              float: none;
+                                                              }
+
+                                                            .header-logo {
+                                                              display: block;
+                                                              margin: 0 auto;
+                                                            }
+
+                                                              .header-title {
+                                                              display: block;
+                                                              text-align: center;
+                                                              position: static;
+                                                              margin-top: -8px;
+                                                            }
+
+                                                            .mobile-nav {
+                                                              position: static;
+                                                              display: block;
+                                                              background-color: #FDFFFC;
+                                                              z-index: 1;
+                                                              text-align: center;
+                                                              width: 100vw;
+                                                              height: 40px;
+                                                              margin: 0;
+                                                              padding: 0;
+                                                              font-weight: 300;
+                                                            }
+                                                        }
+
+
+
+
+
 
 @media screen and (max-width: 1176px) {  /*-------Ipad (768) and narrow desktop*/
 
@@ -576,6 +649,7 @@ footer {
     height: 40px;
     margin: 0;
     padding: 0;
+    font-weight: 300;
   }
 
 
@@ -608,7 +682,6 @@ footer {
 
 
 
-
 .thumb-row {
 
   padding: 0;
@@ -633,6 +706,10 @@ footer {
 
 
 }
+
+
+
+
 
 
 @media screen and (max-width: 667px) {      /* -------- Iphone*/
@@ -671,6 +748,23 @@ footer {
 
 
 }
+
+                                                        @media screen and (max-width: 517px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
+
+                                                          .main-header-h1 {
+                                                            font-size: 2.8em;
+                                                          }
+
+                                                          .mobile-nav {
+                                                            font-size: 1.1em;
+                                                          }
+
+                                                          .header-title {
+                                                            margin-top: 0;
+                                                          }
+
+                                                        }
+
 
 @media screen and (max-width: 423px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
 

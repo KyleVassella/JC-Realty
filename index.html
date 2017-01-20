@@ -1,6 +1,8 @@
 <!--
-   ***URGENT TO-DO:***
+   *******URGENT TO-DO:*******
    • Refactor
+   • Organize file structure (pages)
+   • Remove mobile carousels, use http://stackoverflow.com/a/11484688/6647188 instead. (may not be browser compatible), also try http://jsfiddle.net/3BRN7/669/
    • Remove unnecessary .mobile-nav (use CSS display:none; + media query instead)
    • Apply Bootstrap, Angular SPA
    • Button hover state shows text with house info (just include text inside the <a> on index.html)
@@ -8,6 +10,7 @@
    • Slow fade to diff color on nav items (ROOT example)
    • 'List with us' page which also contains reviews.
    * Parallaxed footer!!!
+
    
    *******TO-DO*******
    • Create responsive mobile nav
@@ -35,6 +38,9 @@
    
    *******IPAD BUGS*******
    - slick arrows dont respond and dissapear on pressing
+
+   *******CHROME*******
+   - on carousel-menu hover, status bar appears on bottom left of browser window
    
    -->
 <!DOCTYPE html>
@@ -44,6 +50,7 @@
       <title>REMAX Janice & Courtney | Cypress Real Estate</title>
       <link rel="stylesheet" href="js/slick/slick.css">
       <link rel="stylesheet" href="js/slick/slick-theme.css">
+      <link rel="stylesheet" href="css/bootstrap.css">
       <link rel="stylesheet" href="css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -56,26 +63,28 @@
       <div class="wrap">
          <header>
             <!-- 		<img class="headerCyFair"src="media/header/CyFairHeader.png"> -->
-            <h1 class="main-header-h1 no-margins">
+            <h1 class="main-header-h1 no-margins"><a href="https://kylevassella.github.io/JC-Realty">
                <img class="header-logo" src="media/Logos/remaxpgLOGO.png">
                <span class="header-title fw-300">JANICE <span class="fw-300">& </span>COURTNEY</span>
-            </h1>
+            </a></h1>
             <!-- 	      <img class="headerHouse"src="media/header/HeaderHouse.png"> -->
             <nav>
                <ul>
-                  <li><a class="fw-400" href="index.html">Home</a></li>
-                  <li><a class="fw-400" href="listings.html">Listings</a></li>
-                  <li><a class="fw-400" href="about.html">About</a></li>
+                  <li><a class="fw-400" href="listings.html">Properties</a></li>
+                  <li><a class="fw-400" href="listings.html">Buy</a></li>
+                  <li><a class="fw-400" href="cma.html">Sell</a></li>
+                  <li><a class="fw-400" href="about.html">Our Team</a></li>
                   <li><a class="fw-400" href="contact.html">Contact</a></li>
                </ul>
             </nav>
          </header>
          <nav class="mobile-nav is-hidden">
             <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="listings.html">Listings</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="contact.html">Contact</a></li>
+                  <li><a class="fw-400" href="listings.html">Properties</a></li>
+                  <li><a class="fw-400" href="listings.html">Buy</a></li>
+                  <li><a class="fw-400" href="cma.html">Sell</a></li>
+                  <li><a class="fw-400" href="about.html">Our Team</a></li>
+                  <li><a class="fw-400" href="contact.html">Contact</a></li>
             </ul>
          </nav>
 
@@ -85,11 +94,24 @@
             <div class="slickSlidesOuter">
                <div class="slickSlides">
                   <!-- 			   <span class="prev"></span> -->
-                  <div class="item slideImg1"></div>
-                  <div class="item slideImg2"></div>
-                  <div class="item slideImg3"></div>
+                  <div class="cover slideImg1"></div>
+                  <div class="cover slideImg2"></div>
+                  <div class="cover slideImg3"></div>
                   <!-- 		    <span class="next"></span> -->
                </div>
+               <div class="container-fluid carousel-menu">
+                     <div class="row">
+                       <div class="col-xs-4">
+                         <a href="https://kylevassella.github.io/JC-Realty/listings.html">FIND A HOME</a>
+                       </div>
+                       <div class="col-xs-4">
+                         <a href="https://kylevassella.github.io/JC-Realty/contact.html">SELL A HOME</a>
+                       </div>
+                       <div class="col-xs-4">
+                         <a href="https://kylevassella.github.io/JC-Realty/cma.html">WHAT'S MY HOME WORTH?</a>
+                       </div>
+                     </div>
+                   </div>
             </div>
             <!-- slick end-->
             <!-- Mobile slick begin-->
@@ -99,6 +121,19 @@
                   <div><img class="imageScale" src="media/slickImages/slickKitchenCropLeftRASTERWeb.gif"></div>
                   <div><img class="imageScale" src="media/slickImages/BackyardLARGEWeb2.gif"></div>
                </div>
+                  <div class="container-fluid">
+                     <div class="row">
+                       <div class="col-xs-4">
+                         <a href="https://kylevassella.github.io/JC-Realty/listings.html">FIND A HOME</a>
+                       </div>
+                       <div class="col-xs-4">
+                         <a href="https://kylevassella.github.io/JC-Realty/contact.html">SELL A HOME</a>
+                       </div>
+                       <div class="col-xs-4">
+                         <a href="https://kylevassella.github.io/JC-Realty/cma.html">WHAT'S MY HOME WORTH?</a>
+                       </div>
+                     </div>
+                   </div>
             </div>
             <!-- Mobile slick end-->
             <div class = "featured-properties">
@@ -108,14 +143,30 @@
                   <div class="thumb-row-1"><a href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumb-img" src="media/propertyThumb1.jpg"></a><a href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumb-img" src="media/propertyThumb1_2.jpg"></a></div><div class="thumb-row-2"><a href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumb-img" src="media/propertyThumb3.jpg"></a><a 
                      href="https://www.har.com/3911-almond-ct/sale_81321238" target="_blank" alt="Featured property thumbnail"><img class="thumb-img" src="media/propertyThumb1_3.jpg"></a></div>
                </div>
+               </div>
+ <div class="slickSlidesOuter-review reviews-carousel">
+      <div class="reviews-title">What our clients are saying...</div>
+         <div class="reviewSlides">
+            
+            <div class="reviews"><div>'We love Courtney and Janice! They made the home buying experience much less stressful than it could have been.'</div><span class="reviews-signature">- Freddy & Barbara F.</span></div>
+            <div class="reviews"><div>'Omg, house is fab!' </div> <span class="reviews-signature">- Cindi Calavera</span></div>
+            <div class="reviews"><div>'THANK YOU! Courtney and Janice could not have been more helpful.'</div><span class="reviews-signature">- Evan S.</span></div>
+            
+         </div>
+      </div>
+
+
+<div>
+<!-- <h2 class="segment-title fw-300"><a href="https://kylevassella.github.io/JC-Realty/cma.html"> WHAT'S MY HOME WORTH? </a></h2> -->
+</div>
+
             </div>
-            <section id = "card-form-container">
+<!--             <section id = "card-form-container">
                <h2 class="segment-title fw-300"> CONTACT US </h2>
                <span class="border"></span>
                <div class = "card-form-inner-home clear">
                   <div id="card-container">
                      <div id="profile-image">
-                        <!--               <img src="media/headshot.jpg" class="headshotForm"> -->
                         <img src="media/JaniceHeadshotCOLOR.jpg" class="headshot-form">
                      </div>
                      <div id="profile-data">
@@ -135,17 +186,11 @@
                         <input class="home-form" type="text" placeholder="Subject" name="subject">
                         <textarea class="home-form" placeholder="Message" name="message"></textarea>
                         <input type="submit" name="submit" id="submit" value="Submit">
-                        <!-- 					              <button class="sendButton" value="send" type="button" onclick="$('#reCaptcha').toggle;">Send</button>
-                           -->					            
+ 
                      </form>
                   </div>
                </div>
-            </section>
-            <div class="customer-reviews">
-               <h2 class="segment-title fw-300">CUSTOMER REVIEWS</h2>
-               <span class="border"></span>
-               <p>Coming soon!</p>
-            </div>
+            </section> -->
          </main>
 
 
@@ -165,10 +210,22 @@
          <script>
             $('.slickSlides').slick({
               arrows: true,
-              dots: true,
+              dots: false,
               infinite: true,
               speed: 350,
               fade: true,
+              cssEase: 'linear',
+              autoplay: true,
+              autoplaySpeed: 5000
+              // appendArrows: $('.arrowAttach')
+            });
+
+            $('.reviewSlides').slick({
+              arrows: true,
+              dots: true,
+              infinite: true,
+              speed: 350,
+              fade: false,
               cssEase: 'linear',
               autoplay: true,
               autoplaySpeed: 5000
