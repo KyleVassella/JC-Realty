@@ -29,6 +29,14 @@ a {
   margin-bottom: 0;
 }
 
+.no-padding {
+  padding: 0;
+}
+
+.border-bottom {
+  border-bottom: 4px solid rgba(48, 48, 48, .7);
+}
+
 .headshot-form {
   opacity: .9;
   height: 220px;
@@ -225,12 +233,25 @@ main {
 
 /********* ARROWS *********/
 
+/*.slick-prev,
+.slick-next {
+  width: auto;
+  height: auto;
+}
+
+.slick-next {
+  right: 2px;
+}*/
+
 .slick-prev:before,
 .slick-next:before
 {
   color: gray;
   font-size: 80px;
+
   }
+
+
 
 .slick-slide {
 /*  width: 100%;*/
@@ -266,7 +287,7 @@ main {
 }
 
 .carousel-menu a:hover {
-  padding: 0 16.5%;
+/*  padding: 0 16.5%;*/
   color: #C52233;
 /*  font-weight: bolder;*/
   background-color: rgba(192, 191, 182, 1);
@@ -327,6 +348,8 @@ main {
   display: inline;
 }
 
+
+
 .thumb-img {
   width: 25%;
   height: auto;
@@ -334,12 +357,43 @@ main {
 
 .thumb-img:hover {
   opacity: .7;
+       transition: all 0.6s; 
+    -moz-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
 /*  background-color: rgba(113, 181, 228, .9);
   background-size: 500px 500px;*/
 }
 
+.featured-row {
+/*  position: relative;*/
+  height: 100%;
+}
 
+.featured-thumb {
+    display: table;
+    background-size: cover;
+    width: 101%;
+    overflow: hidden;
+}
 
+.featured-thumb a {
+    height: 360px;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s
+}
+
+.featured-thumb a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
 
 /*main {
   background-color: #f5f8fa;
@@ -441,7 +495,7 @@ main {
   width: 100vw;
   height: 1000px;
   /*line-height: 1000px;*/
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .about-container {
@@ -655,7 +709,6 @@ footer {
     height: 40px;
     margin: 0;
     padding: 0;
-    font-weight: 300;
   }
 
 
@@ -676,14 +729,18 @@ footer {
     padding-bottom: 70px;
     } 
 
-    .slick-slide {
+/*    .slick-slide {
       height: auto;
-    }
+    }*/
 
     .slick-slide img {
       max-width: 100%;
       height: auto;
       display: block;
+  }
+
+  .carousel-menu {
+    font-size: 1.6em;
   }
 
 
@@ -714,7 +771,26 @@ footer {
 }
 
 
+@media screen and (max-width: 908px) {      /* -------- Optimize .carousel-menu font size*/
+  .carousel-menu {
+    font-size: 1.45em;
+  }
+}
 
+@media screen and (max-width: 767px) {      /* -------- Bootstrap 'extra small' breakpoint*/
+  .carousel-menu {
+    margin-bottom: 200px;
+  }
+
+  .carousel-menu a {
+    border-bottom: 1px solid white;
+  }
+
+  .segment-title {
+    font-size: 2em; /* fallback */
+    font-size: 6.5vw;
+  }
+}
 
 
 
@@ -724,13 +800,16 @@ footer {
     height: 140px;
   }
 
-  .main-header-h1 {
-    font-size: 2.75em;
+  .header-title {
+    font-size: 9em; /* fallback */
+    font-size: 9vw;
+    margin-top: -14px;
     }
 
   .mobile-nav {
     height: auto;
-    font-size: 1em;
+    font-size: 1.4em;
+    margin-top: 10px;
     padding: 12px 0 5px 0;
   }
 
@@ -753,29 +832,13 @@ footer {
 
                                                         @media screen and (max-width: 517px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
 
-                                                          .main-header-h1 {
-                                                            font-size: 2.8em;
+                                                          .header-title {
+                                                            margin-top: -5px;
                                                           }
 
                                                           .mobile-nav {
                                                             font-size: 1.1em;
                                                           }
 
-                                                          .header-title {
-                                                            margin-top: 0;
-                                                          }
 
                                                         }
-
-
-@media screen and (max-width: 423px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
-
-  .main-header-h1 {
-    font-size: 2.3em;
-  }
-
-  .header-title {
-    bottom: 25px;
-  }
-
-}
