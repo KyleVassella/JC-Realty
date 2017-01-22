@@ -63,6 +63,10 @@ a {
   font-weight: 600;
 }
 
+.inline {
+  display: inline;
+}
+
 .border {
     display: block;
     width: 80px;
@@ -330,6 +334,7 @@ main {
 
 .segment-title {
   font-size: 52px;
+/*  line-height: 40px;*/
   letter-spacing: 8px;
   margin-bottom: 12px;
 }
@@ -548,8 +553,13 @@ main {
 
 }
 
-.inline {
-  display: inline;
+.listings-main {
+  margin-top: 25px;
+}
+
+.spiffy {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 /******************************
@@ -694,6 +704,10 @@ footer {
         max-width: 100%;
   /*      height: auto;*/
         display: block;
+    }
+
+    .cma-main {
+      margin-top: 90px;
     }
 }
 
@@ -850,6 +864,10 @@ footer {
 
                                                           .mobile-nav {
                                                             font-size: 1.1em;
+                                                          }
+
+                                                          .segment-title {
+                                                            line-height: 40px;
                                                           }
 
 
