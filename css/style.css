@@ -233,7 +233,7 @@ main {
 
 /********* ARROWS *********/
 
-/*.slick-prev,
+.slick-prev,
 .slick-next {
   width: auto;
   height: auto;
@@ -241,7 +241,7 @@ main {
 
 .slick-next {
   right: 2px;
-}*/
+}
 
 .slick-prev:before,
 .slick-next:before
