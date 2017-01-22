@@ -303,17 +303,17 @@ main {
 }
 
 .slideImg1 {
-  background-image: url('../media/slickImages/built4RASTERWeb.gif');
+  background-image: url('../media/slickImages/slick-image-1.jpg');
 }
 
 .slideImg2 {
-  background-image: url('../media/slickImages/slickKitchenCropLeftRASTERWeb.gif');
+  background-image: url('../media/slickImages/slick-image-2.jpg');
 
 
 }
 
 .slideImg3 {
-  background-image: url('../media/slickImages/BackyardLARGEWeb2.gif');
+  background-image: url('../media/slickImages/slick-image-3.jpg');
 
 }
 
@@ -466,6 +466,7 @@ main {
 }
 
 .about-janice {
+  clear: right;
   width: 100vw;
   height: 398px;
   line-height: 398px;
@@ -475,30 +476,37 @@ main {
 }
 
 .about-headshot-courtney {
-  float: right;
+  float: right; /* clear nxt element! */
 }
 
 .about-headshot-janice {
-  float: left;
+  float: left;  /* clear nxt element! */
 }
 
 .about-headshot-sample {
-  background: url("../media/headshot-sample-cropped.png") no-repeat;
+  background-image: url("../media/headshot-sample-cropped.png");
+  background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 1000px;
+  background-position: center;
+        min-height: 50vw;
+        width: 100%;
+        margin-bottom: 100px;
+/*  min-width: 100vw;*/
+/*  width: 100vw;
+  height: 1000px;*/
   /*line-height: 1000px;*/
-  margin-bottom: 100px;
+/*  margin-bottom: 100px;*/
 }
 
 .about-container {
-  display: inline-block;
+/*  display: inline-block;*/
   position: relative;
-  left: 200px;
-  top: 300px;
-  font-size: 3em;
+  top: 18vw;/*300px;*/
+  left: -30px;
+  float: right;
+  font-size: 3vw;
   /*padding: 40px 20px;*/
-  width: 1000px;
+  max-width: 60vw;
   padding: 0 20px;
   background-color: rgba(255, 245, 253, .1);  /*2C302E **0B132B **1C2541 89, 101, 111, .9*/
   border-radius: 15px;
@@ -622,45 +630,72 @@ footer {
 
 /* Media Queries ------------------ */
 
-                                                        @media screen and (max-width: 1340px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
+@media screen and (max-width: 1340px) {  /*--------- Narrow browser windows */
 
-                                                            nav {
-                                                              display: none;
-                                                            }
+    nav {
+      display: none;
+    }
 
-                                                            header {
-                                                              height: 180px;
-                                                            }
+    header {
+      height: 180px;
+    }
 
-                                                            .main-header-h1 {
-                                                              float: none;
-                                                              }
+    .main-header-h1 {
+      float: none;
+      }
 
-                                                            .header-logo {
-                                                              display: block;
-                                                              margin: 0 auto;
-                                                            }
+    .header-logo {
+      display: block;
+      margin: 0 auto;
+    }
 
-                                                              .header-title {
-                                                              display: block;
-                                                              text-align: center;
-                                                              position: static;
-                                                              margin-top: -8px;
-                                                            }
+      .header-title {
+      display: block;
+      text-align: center;
+      position: static;
+      margin-top: -8px;
+    }
 
-                                                            .mobile-nav {
-                                                              position: static;
-                                                              display: block;
-                                                              background-color: #FDFFFC;
-                                                              z-index: 1;
-                                                              text-align: center;
-                                                              width: 100vw;
-                                                              height: 40px;
-                                                              margin: 0;
-                                                              padding: 0;
-                                                              font-weight: 300;
-                                                            }
-                                                        }
+    .mobile-nav {
+      position: static;
+      display: block;
+      background-color: #FDFFFC;
+      z-index: 1;
+      text-align: center;
+      width: 100vw;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      font-weight: 300;
+    }
+
+    /* show mobile carousel, hide parallax */
+    .slickSlidesOuter {
+      display: none;
+    }
+
+    .imageScale {
+      width: 100%;
+      height: auto;
+    }
+
+    .slickSlidesMobile {
+      display: inline-block;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 70px;
+      } 
+
+  /*    .slick-slide {
+        height: auto;
+      }*/
+
+      .slick-slide img {
+        max-width: 100%;
+  /*      height: auto;*/
+        display: block;
+    }
+}
 
 
 
@@ -692,7 +727,7 @@ footer {
     margin: 0 auto;
   }
 
-  .mobile-nav {
+/*  .mobile-nav {
     position: static;
     display: block;
     background-color: #FDFFFC;
@@ -702,35 +737,10 @@ footer {
     height: 40px;
     margin: 0;
     padding: 0;
-  }
+  }*/
 
 
-/* show mobile carousel, hide parallax */
-  .slickSlidesOuter {
-    display: none;
-  }
 
-  .imageScale {
-    width: 100%;
-    height: auto;
-  }
-
-  .slickSlidesMobile {
-    display: inline-block;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 70px;
-    } 
-
-/*    .slick-slide {
-      height: auto;
-    }*/
-
-    .slick-slide img {
-      max-width: 100%;
-/*      height: auto;*/
-      display: block;
-  }
 
   .carousel-menu {
     font-size: 1.6em;
