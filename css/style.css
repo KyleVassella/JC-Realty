@@ -1,11 +1,13 @@
 * {
-  font-family: 'Open Sans', sans-serif;     /* raleway was original font */
-      font-weight: 300;
+  /* raleway was original font */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
-html,body        /*fix whitespace on right side*/
+html, body
+/*fix Chrome edge whitespace on overscroll*/
 {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 a {
@@ -68,11 +70,11 @@ a {
 }
 
 .border {
-    display: block;
-    width: 80px;
-    height: 2px;
-    background: #000000;
-    margin: 0 auto 43.16px auto;
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #000000;
+  margin: 0 auto 43.16px auto;
 }
 
 .is-hidden {
@@ -87,7 +89,9 @@ a {
   color: #FDFFFC;
 }
 
+
 /*Floated CLEARFIX*/
+
 .group:after {
   content: “ “;
   display: table;
@@ -98,40 +102,35 @@ a {
   text-align: initial;
 }
 
-
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-body:after {    /* pre-load hover images to avoid first time load delay when hovering over social icons */
- display:none;
- content: url(../media/social/twitterHoverNew.png) url(../media/social/facebookHoverNew.png);
+body:after {
+  /* pre-load hover images to avoid first time load delay when hovering over social icons */
+  display: none;
+  content: url(../media/social/twitterHoverNew.png) url(../media/social/facebookHoverNew.png);
 }
 
-.wrap {         
+.wrap {
   min-height: calc(100vh - 80px);
 }
 
-
 header {
-/*  background-color: pink;*/
-  background-color: #FDFFFC;/*rgba(48, 48, 48, 1);*/ /*rgba(78, 0, 0, 1);*/        /*rgba(0, 23, 31, .5) will do for now steel rgba(79, 0, 15, 1) betterer maroon   rgba(62, 0, 12, 1) BETTER maroon (DARK)   rgba(70, 18, 32, .9) maroonish    rgba(149, 144, 168, .6) purple        rgba(255,192,203,1)   (other pink)*/ 
-/*  opacity: .6;*/
-  height: 100px;   /*160px, 328px*/ 
-/*  margin: 0;*/
+  background-color: #FDFFFC;
+  height: 100px;
   padding: 0;
 }
-
 
 .main-header-h1 {
   float: left;
   font-size: 4em;
   /*color: rgb(102, 102, 102);*/
   opacity: 1;
-  color: rgba(48, 48, 48, 1);/*#FFFFFA;*/
+  color: rgba(48, 48, 48, 1);
+  /*#FFFFFA;*/
   height: 100px;
 }
 
@@ -143,18 +142,16 @@ header {
 
 .header-title {
   position: relative;
-/*  bottom: 38px;*/
   left: 15px;
   overflow: hidden;
 }
 
-
 nav {
-position: relative;
-top: 45px;
-right: 23px;
-font-size: 1.65em;
-float: right;
+  position: relative;
+  top: 45px;
+  right: 23px;
+  font-size: 1.65em;
+  float: right;
 }
 
 ul {
@@ -167,13 +164,12 @@ ul {
 li {
   display: inline;
   text-transform: uppercase;
-
 }
-
 
 a:link {
   text-decoration: none;
-  color: black; /*#FFFFFA;*/
+  color: black;
+  /*#FFFFFA;*/
 }
 
 nav a {
@@ -181,7 +177,8 @@ nav a {
 }
 
 nav a:visited {
-  color: black;/*#FFFFFA;*/
+  color: black;
+  /*#FFFFFA;*/
 }
 
 nav a.selected, nav a:hover {
@@ -191,7 +188,7 @@ nav a.selected, nav a:hover {
 }
 
 main {
-  clear: both;    /* clears float from the flaot:left header */
+  clear: both;
 }
 
 
@@ -200,23 +197,24 @@ main {
 /*******************************/
 
 .slickSlidesOuter {
-/*  width: 100%;*/
+  /*  width: 100%;*/
   margin: 0 auto;
   padding-bottom: 70px;
-/*  background-image: linear-gradient(transparent 20%, lightgray, white);*/
+  /*  background-image: linear-gradient(transparent 20%, lightgray, white);*/
 }
 
 .slickSlidesOuter-review {
-/*  width: 100%;*/
+  /*  width: 100%;*/
   margin: 0 auto 100px auto;
   padding-bottom: 70px;
-/*  background-image: linear-gradient(transparent 20%, lightgray, white);*/
+  /*  background-image: linear-gradient(transparent 20%, lightgray, white);*/
 }
 
 .slickSlides {
-/*width: 100%;*/
-/*background-size: cover;*/
+  /*width: 100%;*/
+  /*background-size: cover;*/
 }
+
 
 /*.slick-dots li button:before{
   position: absolute;
@@ -224,21 +222,13 @@ main {
 }*/
 
 .slides {
- /* width: 100%;*/
-/*  height: 100%;*/
   margin: 0 auto 40px;
   text-align: center;
 }
 
-.slide {
-/*  width: 100%;*/
-/*  height: 100%;*/
-}
-
 /********* ARROWS *********/
 
-.slick-prev,
-.slick-next {
+.slick-prev, .slick-next {
   width: auto;
   height: auto;
 }
@@ -247,41 +237,28 @@ main {
   right: 2px;
 }
 
-.slick-prev:before,
-.slick-next:before
-{
+.slick-prev:before, .slick-next:before {
   color: gray;
   font-size: 80px;
-
-  }
-
-
-
-.slick-slide {
-/*  width: 100%;*/
-/*  height: auto;*/
-  /*height: 460px;*/
 }
 
 .carousel-menu {
   font-size: 1.8em;
 }
 
-.carousel-menu div{
+.carousel-menu div {
   background-color: rgba(232, 230, 220, 1);
-/*  background-color: rgba(0, 0, 0, .1);*/
-/*  background-color: rgba(220, 220, 210, .9);*/
-
+  /*  background-color: rgba(0, 0, 0, .1);*/
+  /*  background-color: rgba(220, 220, 210, .9);*/
   border-left: 1px solid #fff;
   padding: 0;
   height: 80px;
-  line-height: 80px;    /* allows you to put vertical-align: center; on your anchors */
+  line-height: 80px;  /* allows you to use vertical-align: center; on your anchors */
 }
 
-.carousel-menu div:first-child{
+.carousel-menu div:first-child {
   border-left: 0;
 }
-
 
 .carousel-menu a {
   display: inline-block;
@@ -291,15 +268,13 @@ main {
 }
 
 .carousel-menu a:hover {
-/*  padding: 0 16.5%;*/
+  /*  padding: 0 16.5%;*/
   color: #C52233;
-/*  font-weight: bolder;*/
+  /*  font-weight: bolder;*/
   background-color: rgba(192, 191, 182, 1);
 }
 
-
-
-.cover{
+.cover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -312,16 +287,11 @@ main {
 
 .slideImg2 {
   background-image: url('../media/slickImages/slick-image-2.jpg');
-
-
 }
 
 .slideImg3 {
   background-image: url('../media/slickImages/slick-image-3.jpg');
-
 }
-
-
 
 
 /******************************
@@ -334,7 +304,7 @@ main {
 
 .segment-title {
   font-size: 52px;
-/*  line-height: 40px;*/
+  /*  line-height: 40px;*/
   letter-spacing: 8px;
   margin-bottom: 12px;
 }
@@ -353,8 +323,6 @@ main {
   display: inline;
 }
 
-
-
 .thumb-img {
   width: 25%;
   height: auto;
@@ -362,54 +330,55 @@ main {
 
 .thumb-img:hover {
   opacity: .7;
-       transition: all 0.6s; 
-    -moz-transition: all 0.6s;
-    -webkit-transition: all 0.6s;
-/*  background-color: rgba(113, 181, 228, .9);
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  /*  background-color: rgba(113, 181, 228, .9);
   background-size: 500px 500px;*/
 }
 
 .featured-row {
-/*  position: relative;*/
+  /*  position: relative;*/
   height: 100%;
 }
 
 .featured-thumb {
-    display: table;
-    background-size: cover;
-    width: 101%;
-    overflow: hidden;
+  display: table;
+  background-size: cover;
+  width: 101%;
+  overflow: hidden;
 }
 
 .featured-thumb a {
-    height: 360px;
-    vertical-align: middle;
-    display: table-cell;
-    text-align: center;
-    color: black;
-    font-size: 2em;
-    background-color: rgba(255, 255, 255, 0.8);
-    opacity: 0;
-    transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s
+  height: 360px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  color: black;
+  font-size: 2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s
 }
 
 .featured-thumb a:hover {
-    opacity: 1;
-    text-decoration: none;
+  opacity: 1;
+  text-decoration: none;
 }
+
 
 /*main {
   background-color: #f5f8fa;
 }*/
 
 .clear:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 .reviews-title {
@@ -476,11 +445,13 @@ main {
 }
 
 .about-headshot-courtney {
-  float: right; /* clear nxt element! */
+  float: right;
+  /* clear nxt element! */
 }
 
 .about-headshot-janice {
-  float: left;  /* clear nxt element! */
+  float: left;
+  /* clear nxt element! */
 }
 
 .about-headshot-sample {
@@ -488,27 +459,29 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-        min-height: 50vw;
-        width: 100%;
-        margin-bottom: 50px;
-/*  min-width: 100vw;*/
-/*  width: 100vw;
+  min-height: 50vw;
+  width: 100%;
+  margin-bottom: 50px;
+  /*  min-width: 100vw;*/
+  /*  width: 100vw;
   height: 1000px;*/
   /*line-height: 1000px;*/
-/*  margin-bottom: 100px;*/
+  /*  margin-bottom: 100px;*/
 }
 
 .about-container {
-/*  display: inline-block;*/
+  /*  display: inline-block;*/
   position: relative;
-  top: 18vw;/*300px;*/
+  top: 18vw;
+  /*300px;*/
   left: -30px;
   float: right;
   font-size: 3vw;
   /*padding: 40px 20px;*/
   max-width: 60vw;
   padding: 0 20px;
-  background-color: rgba(255, 245, 253, .1);  /*2C302E **0B132B **1C2541 89, 101, 111, .9*/
+  background-color: rgba(255, 245, 253, .1);
+  /*2C302E **0B132B **1C2541 89, 101, 111, .9*/
   border-radius: 15px;
 }
 
@@ -516,14 +489,13 @@ main {
   font-size: 2.4em;
 }
 
-
 .cma-main {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .cma-form {
-  background-color: rgba(211,211,211, .5);
+  background-color: rgba(211, 211, 211, .5);
   border-radius: 1%;
 }
 
@@ -538,14 +510,12 @@ main {
   font-weight: lighter;
 }
 
-
-.form-cma-margins{
+.form-cma-margins {
   width: 70%;
   margin: 0 auto 100px auto;
-/*  display: table;*/
-/*    margin-right: -15px;
+  /*  display: table;*/
+  /*    margin-right: -15px;
   margin-left: -15px;*/
-
 }
 
 .listings-main {
@@ -557,11 +527,10 @@ main {
   margin-right: 15px;
 }
 
+
 /******************************
       HOUSE Shaped Form
 ******************************/
-/*Use Pseudo elements (:after) to try to achieve partial length borders, OR use absolutely positioned divs for each partial border http://stackoverflow.com/questions/8835142/any-way-to-declare-a-size-partial-border-to-a-box 
-Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would help your CSS skills but not necessarily the cleanest or proper way */
 
 /*.house-sky {
   position: relative;
@@ -583,26 +552,24 @@ Consider using SVGs instead of trying to draw it w/ pure CSS. CSS drawing would 
 }*/
 
 
-
 /******************************
       Footer/Social Media
 ******************************/
 
-
 footer {
-  background-color: rgba(36, 36, 36, 1); /*48 48 48 1*/
+  background-color: rgba(36, 36, 36, 1);
+  /*48 48 48 1*/
   height: 80px;
   width: 100%;
   color: #FFFFFA;
 }
 
-
 .social-twitter {
   margin-top: 10px;
   width: 60px;
-  height:60px;
+  height: 60px;
   display: inline-block;
-  background:transparent url('../media/social/twitterNew2.png') center no-repeat;
+  background: transparent url('../media/social/twitterNew2.png') center no-repeat;
 }
 
 .social-twitter:hover {
@@ -611,15 +578,14 @@ footer {
 
 .social-facebook {
   width: 60px;
-  height:60px;
+  height: 60px;
   display: inline-block;
-  background:transparent url('../media/social/facebookNew2.png') center no-repeat;
+  background: transparent url('../media/social/facebookNew2.png') center no-repeat;
 }
 
 .social-facebook:hover {
   background-image: url('../media/social/facebookHoverNew.png');
 }
-
 
 
 /*.flairBar {
@@ -630,113 +596,30 @@ footer {
 */
 
 
-
-
-
 /* Media Queries ------------------ */
 
-@media screen and (max-width: 1340px) {  /*--------- Narrow browser windows */
-
-    nav {
-      display: none;
-    }
-
-    header {
-      height: 180px;
-    }
-
-    .main-header-h1 {
-      float: none;
-      }
-
-    .header-logo {
-      display: block;
-      margin: 0 auto;
-    }
-
-      .header-title {
-      display: block;
-      text-align: center;
-      position: static;
-      margin-top: -8px;
-    }
-
-    .mobile-nav {
-      position: static;
-      display: block;
-      background-color: #FDFFFC;
-      z-index: 1;
-      text-align: center;
-      width: 100vw;
-      height: 40px;
-      margin: 0;
-      padding: 0;
-      font-weight: 300;
-    }
-
-    /* show mobile carousel, hide parallax */
-    .slickSlidesOuter {
-      display: none;
-    }
-
-    .imageScale {
-      width: 100%;
-      height: auto;
-    }
-
-    .slickSlidesMobile {
-      display: inline-block;
-      width: 100%;
-      margin: 0 auto;
-      padding-bottom: 70px;
-      } 
-
-  /*    .slick-slide {
-        height: auto;
-      }*/
-
-      .slick-slide img {
-        max-width: 100%;
-  /*      height: auto;*/
-        display: block;
-    }
-
-    .cma-main {
-      margin-top: 90px;
-    }
-}
-
-
-
-
-
-
-@media screen and (max-width: 1176px) {  /*-------Ipad (768) and narrow desktop*/
-
+@media screen and (max-width: 1340px) {
+  /*--------- Narrow browser windows */
   nav {
-      display: none;
-    }
-
+    display: none;
+  }
   header {
     height: 180px;
   }
-
   .main-header-h1 {
     float: none;
-    }
-
-  .header-logo {
-    position: static;
   }
-
-  .header-title {
+  .header-logo {
     display: block;
-    left: 0;    /* re-set headerTitle's position left alignment to 0 */
-    bottom: 30px;
     margin: 0 auto;
   }
-
-/*  .mobile-nav {
+  .header-title {
+    display: block;
+    text-align: center;
+    position: static;
+    margin-top: -8px;
+  }
+  .mobile-nav {
     position: static;
     display: block;
     background-color: #FDFFFC;
@@ -746,124 +629,135 @@ footer {
     height: 40px;
     margin: 0;
     padding: 0;
-  }*/
+    font-weight: 300;
+  }
+  /* show mobile carousel, hide parallax */
+  .slickSlidesOuter {
+    display: none;
+  }
+  .imageScale {
+    width: 100%;
+    height: auto;
+  }
+  .slickSlidesMobile {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+  }
 
+  .slick-slide img {
+    max-width: 100%;
+    display: block;
+  }
+  .cma-main {
+    margin-top: 90px;
+  }
+}
 
-
+@media screen and (max-width: 1176px) {
+  /*-------Ipad (768) and narrow desktop*/
+  nav {
+    display: none;
+  }
+  header {
+    height: 180px;
+  }
+  .main-header-h1 {
+    float: none;
+  }
+  .header-logo {
+    position: static;
+  }
+  .header-title {
+    display: block;
+    left: 0;
+    bottom: 30px;
+    margin: 0 auto;
+  }
 
   .carousel-menu {
     font-size: 1.6em;
   }
-
-
-
-.thumb-row {
-
-  padding: 0;
-  margin: 0;
+  .thumb-row {
+    padding: 0;
+    margin: 0;
+  }
+  .thumb-row-1 {
+    display: block;
+    font-size: 0;
+  }
+  .thumb-row-2 {
+    display: block;
+    font-size: 0;
+  }
+  .thumb-img {
+    width: 50%;
+    height: auto;
+  }
 }
 
-.thumb-row-1 {
-  display: block;
-  font-size: 0;
-}
-
-.thumb-row-2 {
-  display: block;
-  font-size: 0;
-}
-
-.thumb-img {
-  width: 50%;
-  height: auto;
-}
-
-
-
-}
-
-
-@media screen and (max-width: 908px) {      /* -------- Optimize .carousel-menu font size*/
+@media screen and (max-width: 908px) {
+  /* -------- Optimize .carousel-menu font size*/
   .carousel-menu {
     font-size: 1.45em;
   }
 }
 
-@media screen and (max-width: 767px) {      /* -------- Bootstrap 'extra small' breakpoint*/
-
-
-.slick-next {
-  right: 0;
-}
-
-.slick-prev:before,
-.slick-next:before
-{
-  font-size: 40px;
-
+@media screen and (max-width: 767px) {
+  /* -------- Bootstrap 'extra small' breakpoint*/
+  .slick-next {
+    right: 0;
   }
-
+  .slick-prev:before, .slick-next:before {
+    font-size: 40px;
+  }
   .carousel-menu {
     margin-bottom: 200px;
   }
-
   .carousel-menu a {
     border-bottom: 1px solid white;
   }
-
   .segment-title {
     font-size: 2em; /* fallback */
     font-size: 6.5vw;
   }
 }
 
-
-
-@media screen and (max-width: 667px) {      /* -------- Iphone*/
-
+@media screen and (max-width: 667px) {
+  /* -------- Iphone*/
   header {
     height: 140px;
   }
-
   .header-title {
     font-size: 9em; /* fallback */
     font-size: 9vw;
     margin-top: -14px;
-    }
-
+  }
   .mobile-nav {
     height: auto;
     font-size: 1.4em;
     margin-top: 10px;
     padding: 12px 0 5px 0;
   }
-
   .slickSlidesOuter {
     width: 100%;
   }
-
   .slick-slide img {
-    max-width:100%;
-/*    height: auto;*/
+    max-width: 100%;
     display: block;
   }
-
-
 }
 
-                                                        @media screen and (max-width: 517px) {  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
-
-                                                          .header-title {
-                                                            margin-top: -5px;
-                                                          }
-
-                                                          .mobile-nav {
-                                                            font-size: 1.1em;
-                                                          }
-
-                                                          .segment-title {
-                                                            line-height: 40px;
-                                                          }
-
-
-                                                        }
+@media screen and (max-width: 517px) {
+  /*--------- Super narrow browser windows **DO THESE MAKE LOAD TIME SLOWER? */
+  .header-title {
+    margin-top: -5px;
+  }
+  .mobile-nav {
+    font-size: 1.1em;
+  }
+  .segment-title {
+    line-height: 40px;
+  }
+}
