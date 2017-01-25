@@ -74,7 +74,7 @@ a {
   width: 80px;
   height: 2px;
   background: #000000;
-  margin: 0 auto 43.16px auto;
+  margin: 0 auto 43px auto;
 }
 
 .is-hidden {
@@ -382,6 +382,10 @@ main {
   visibility: hidden;
 }
 
+.reviews-frame {
+  margin-bottom: -58px;
+}
+
 .reviews-title {
   background-color: rgba(232, 230, 220, 1);
   font-size: 3em;
@@ -419,6 +423,10 @@ main {
   margin-left: 150px;
   font-weight: bolder;
   font-size: .8em;
+}
+
+.home-worth-frame {
+  margin-bottom: 175px;
 }
 
 #card-form-container {
