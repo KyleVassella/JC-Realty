@@ -45,7 +45,7 @@
                   <h1> WHAT'S MY HOME'S MARKET VALUE? </h1>
                   <h3> If you'd like to know your home's current market value, please fill out the form below or call <br> <b>713-725-1637</b> to recieve a free, confidential valuation.</h3>
                </div>
-               <form id="ihf-valuation-request-form" data-ihf-event="valuation-request-form-submit" class="form-horizontal form-cma-margins group" action="http://37.60.240.211/valuation-form/" method="POST" data-ihf-event-bound="true">
+               <form id="" data-ihf-event="" class="form-horizontal form-cma-margins group" action="" method="POST" data-ihf-event-bound="true" onsubmit="return validateForm()">
                   <div class="JKGH00920" style="position: absolute; top: -2000px; left: -2000px;">
                      <label> Message
                      <input name="JKGH00920" placeholder="Enter your message" autocomplete="off"> </label>
@@ -54,13 +54,13 @@
                   <div class="form-group">
                      <label for="name" class="col-md-3 col-lg-3 control-label field-label col-sm inline"> Name* </label>
                      <div class="col-md-9 col-lg-9 float-right">
-                        <input id="name" name="user_name" class="form-control inline" placeholder="required" required="required" type="text" value="" maxlength="40"> 
+                        <input id="name" name="user_name" class="form-control inline name-input" placeholder="required" required="required" type="text" value="" maxlength="40"> 
                      </div>
                   </div>
                   <div class="form-group">
-                     <label for="email" class="col-md-3 col-lg-3 control-label field-label clear-both"> Email* </label>
+                     <label for="email" class="col-md-3 col-lg-3 control-label field-label clear-both email-label"> Email* </label>
                      <div class="col-md-9 col-lg-9">
-                        <input id="email" name="user_email" class="form-control" placeholder="required" required="required" type="email" value="" maxlength="40"> 
+                        <input id="email" name="user_email" class="form-control email-input" placeholder="required" required="required" type="email" value="" maxlength="40"> 
                      </div>
                   </div>
                   <div class="form-group">
@@ -215,7 +215,7 @@
                      </div>
                   </div>
                   <div class="form-group">
-                     <div class="col-md-offset-3 col-md-9 col-lg-offset-3 col-lg-9"> <span class="help-block"> * Name, phone number, and email address are required. Please be sure your email address is entered correctly.</span> </div>
+                     <div class="col-md-offset-3 col-md-9 col-lg-offset-3 col-lg-9"> <span class="help-block"> * Name, and email address are required. Please be sure your email address is entered correctly.</span> </div>
                   </div>
                </form>
             </div>
@@ -227,5 +227,8 @@
             <a href = "https://www.facebook.com/courtney.l.farmer" class = "social-facebook" alt = "Twitter Icon"></a>
          </div>
       </footer>
+      <script src="js/jquery-3.1.0.min.js"></script>
+     <!--  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
+      <script src="js/app.js"></script>
    </body>
 </html>
